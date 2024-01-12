@@ -1,0 +1,19 @@
+$breakpoints: (
+    "small": 576px,
+    "medium": 768px,
+    "large": 992px,
+    "xlarge": 1200px,
+);
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @each $breakpoint, $size in $breakpoints {
+        @media (max-width: $size) {
+            max-width: $size;
+        }
+    }
+}
