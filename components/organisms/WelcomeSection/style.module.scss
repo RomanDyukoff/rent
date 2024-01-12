@@ -1,6 +1,7 @@
 .welcome {
     position: relative;
     height: 600px;
+
     &__bg {
         position: absolute;
         top: 0;
@@ -11,6 +12,10 @@
         background-size: cover;
         background-position: center;
         z-index: -1;
+    }
+
+    &__contacts {
+        display: none;
     }
 
     &__content {
@@ -24,20 +29,6 @@
         height: auto;
         padding: 35px 40px;
         background-color: #00a08a;
-
-        @media (max-width: 768px) {
-            top: 220px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 500px;
-            padding: 30px;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        @media (max-width: 576px) {
-            width: 90%;
-            padding: 20px;
-        }
     }
 
     &__text {
@@ -51,8 +42,32 @@
         letter-spacing: 3px;
         text-transform: uppercase;
         color: #ffff;
+    }
 
-        @media (max-width: 576px) {
+    @media (max-width: 768px) {
+        height: 500px;
+
+        &__contacts {
+            display: flex;
+        }
+
+        &__content {
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    @media (max-width: 576px) {
+        &__content {
+            width: 90%;
+            padding: 20px;
+        }
+
+        &__text {
             font-size: 1.5rem;
         }
     }

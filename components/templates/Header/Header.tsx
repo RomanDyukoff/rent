@@ -18,6 +18,7 @@ export const Header = (): JSX.Element => {
 			<Container classNames={styles.header__container}>
 				<Logo classNames={styles.header__title} />
 				<Navigation classNames={styles.header__nav} navItems={items} />
+				<a className={styles.header__link} href="tel:+375 29 784 4444">+375 29 784 4444</a>
 			</Container>
 		</header>
 	);

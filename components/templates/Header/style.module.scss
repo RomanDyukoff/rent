@@ -1,3 +1,5 @@
+$media-breakpoint: 768px;
+
 .header {
     padding: 20px 0;
     background-color: #00a08a;
@@ -14,5 +16,16 @@
         font-weight: 400;
         letter-spacing: 0.6px;
         text-transform: capitalize;
+    }
+
+    &__link {
+        font-size: 18px;
+        color: #fff;
+    }
+
+    @media (max-width: $media-breakpoint) {
+        &__link {
+            display: none;
+        }
     }
 }
