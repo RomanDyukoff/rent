@@ -7,9 +7,9 @@ import styles from './style.module.scss';
 
 const items: NavItemProps[] = [
 	{ href: '#about', label: 'О Нас' },
-	{ href: '#works', label: 'Работы' },
+	{ href: '#park', label: 'Парк' },
+	{ href: '#requi', label: 'Условия' },
 	{ href: '#contacts', label: 'Контакты' },
-	{ href: '#price', label: 'Цены' },
 ];
 
 export const Header = (): JSX.Element => {

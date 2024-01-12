@@ -1,8 +1,6 @@
 .welcome {
     position: relative;
     height: 600px;
-    background: linear-gradient(180deg, #0c0c0e 0%, #0c0c0e 0.01%, rgba(18, 18, 21, 0.1) 100%);
-
     &__bg {
         position: absolute;
         top: 0;
@@ -25,7 +23,7 @@
         width: 600px;
         height: auto;
         padding: 35px 40px;
-        background-color: #0c0c0e;
+        background-color: #00a08a;
 
         @media (max-width: 768px) {
             top: 220px;
