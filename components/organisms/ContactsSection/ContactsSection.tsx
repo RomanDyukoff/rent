@@ -1,13 +1,7 @@
 'use client';
-
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 import { Map, YMaps } from '@pbe/react-yandex-maps';
-
 import { Title } from '@/components/atoms/Title/Title';
-
 import { Container } from '../../atoms/Container/Container';
-
 import styles from './style.module.scss';
 
 export const ContactsSection = (): JSX.Element => {
