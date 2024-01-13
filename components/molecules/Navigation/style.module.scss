@@ -1,13 +1,26 @@
 $burger-color: #000;
 $burger-color-open: #bb945f;
-$media-breakpoint: 768px;
+$media-sm: 768px;
+$media-lg: 900px;
 
 .navigation {
     display: flex;
     align-items: center;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-right: 50px;
+        & > img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
     &__burger {
         position: relative;
-        visibility: hidden;
+        display: none;
         width: 2rem;
         height: 2rem;
         transform: rotate(0deg);
@@ -78,9 +91,9 @@ $media-breakpoint: 768px;
         color: #000;
     }
 
-    @media (max-width: $media-breakpoint) {
+    @media (max-width: $media-lg) {
         &__burger {
-            visibility: visible;
+            display: flex;
         }
         &__menu {
             display: none;
@@ -98,6 +111,12 @@ $media-breakpoint: 768px;
             font-size: 1.8rem;
             box-shadow: 5px 10px 5px 5px rgba(34, 60, 80, 0.6);
             animation: openBurger 0.3s ease;
+        }
+    }
+
+    @media (max-width: $media-sm) {
+        &__link {
+            display: none;
         }
     }
 }

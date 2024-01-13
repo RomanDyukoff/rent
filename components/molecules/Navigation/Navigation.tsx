@@ -8,6 +8,9 @@ import { NavList } from '../../atoms/NavList/NavList';
 
 import styles from './style.module.scss';
 
+import Image from 'next/image';
+import phone from '@/public/phone.svg'
+
 interface NavigationProps {
 	classNames?: string;
 	children?: React.ReactNode;
@@ -42,6 +45,12 @@ export const Navigation = ({
 
 	return (
 		<nav className={`${classNames} ${styles.navigation}`}>
+
+			<a className={styles.navigation__link} href="tel:+375 29 784 4444">
+				<Image src={phone} alt='phone' />
+				+375 29 784 4444
+			</a>
+
 			<button
 				onClick={toggleButton}
 				className={`${styles.navigation__burger} ${isOpen ? `${styles.open}` : ''}`}
