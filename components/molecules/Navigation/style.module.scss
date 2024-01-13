@@ -1,4 +1,4 @@
-$burger-color: #fff;
+$burger-color: #000;
 $burger-color-open: #bb945f;
 $media-breakpoint: 768px;
 
@@ -7,7 +7,7 @@ $media-breakpoint: 768px;
     align-items: center;
     &__burger {
         position: relative;
-        display: none;
+        visibility: hidden;
         width: 2rem;
         height: 2rem;
         transform: rotate(0deg);
@@ -46,7 +46,7 @@ $media-breakpoint: 768px;
                 &:nth-child(1) {
                     top: 0.9rem;
                     transform: rotate(135deg);
-                    background-color: $burger-color-open;
+                    background-color: $burger-color;
                 }
 
                 &:nth-child(2) {
@@ -57,7 +57,7 @@ $media-breakpoint: 768px;
                 &:nth-child(3) {
                     top: 0.9rem;
                     transform: rotate(-135deg);
-                    background-color: $burger-color-open;
+                    background-color: $burger-color;
                 }
             }
         }
@@ -72,30 +72,41 @@ $media-breakpoint: 768px;
 
     &__list {
         gap: 30px;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 20px;
         font-weight: 400;
-        color: #fff;
+        color: #000;
     }
 
     @media (max-width: $media-breakpoint) {
         &__burger {
-            display: block;
+            visibility: visible;
         }
         &__menu {
             display: none;
         }
         &__list {
             position: absolute;
-            top: 90px;
+            top: 75px;
             right: 0;
             bottom: 0;
             flex-direction: column;
             align-items: start;
-            background-color: rgba(12, 12, 14, 0.9);
+            background-color: #fff;
             padding: 2rem 3rem;
             z-index: 3;
             font-size: 1.8rem;
+            box-shadow: 5px 10px 5px 5px rgba(34, 60, 80, 0.6);
+            animation: openBurger 0.3s ease;
         }
+    }
+}
+
+@keyframes openBurger {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 0;
     }
 }

@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     padding: 1rem;
+    color: #fff;
 
     & > p {
         font-size: 2rem;
@@ -19,7 +19,7 @@
         font-size: 18px;
         line-height: 22px;
 
-        border-bottom: 1px solid rgba(46, 54, 50, 0.1);
+        border-bottom: 2px solid rgba(240, 240, 240, 0.1);
 
         & > div:first-child {
             display: flex;
