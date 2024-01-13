@@ -10,6 +10,7 @@ export const listCars:CardAutoType[] = [
         height: "1.5м",
         money: "80",
         img: CarOne,
+        type: "грузоперевозка"
     },
     {
         name: "GAZ-2705",
@@ -18,5 +19,6 @@ export const listCars:CardAutoType[] = [
         height: "1.5м",
         money: "80",
         img: CarTwo,
+        type: "пассажироперевозка"
     }
 ]

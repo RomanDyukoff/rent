@@ -6,5 +6,6 @@ export interface CardAutoType {
     year: string,
     weight: string,
     height: string,
-    money: string
+    money: string,
+    type: string,
 }

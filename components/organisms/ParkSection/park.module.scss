@@ -1,15 +1,24 @@
-.items{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
+.wrapper {
+  margin: 60px 0;
 
+  .park-title{
+    text-align: center;
+    padding: 30px;
+  }
 
-}
-@media (max-width: 1340px) {
-  .items{
-    justify-content: center;
-    gap: 50px;
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media (max-width: 1340px) {
+    .items {
+      justify-content: center;
+      gap: 50px;
+    }
   }
 }
+
 
