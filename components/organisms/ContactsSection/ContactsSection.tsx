@@ -1,5 +1,4 @@
 "use client";
-import { Map, YMaps } from "@pbe/react-yandex-maps";
 import { Title } from "@/components/atoms/Title/Title";
 import { Container } from "../../atoms/Container/Container";
 import styles from "./contacts.module.scss";
