@@ -1,3 +1,5 @@
+$media-sm: 768px;
+
 .welcome {
     position: relative;
     height: 600px;
@@ -45,7 +47,7 @@
         color: #ffff;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: $media-sm) {
         height: 500px;
 
         &__contacts {
