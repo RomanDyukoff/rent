@@ -1,3 +1,5 @@
+$media-msm: 576px;
+
 .badge {
     display: flex;
     flex-direction: column;
@@ -5,7 +7,6 @@
     align-items: center;
     padding: 1rem;
     color: #fff;
-
     & > p {
         font-size: 2rem;
     }
@@ -48,6 +49,16 @@
                     object-fit: contain;
                 }
             }
+        }
+    }
+
+    @media (max-width: $media-msm) {
+        & > p {
+            font-size: 1.8rem;
+        }
+
+        &__contact {
+            gap: 20px;
         }
     }
 }

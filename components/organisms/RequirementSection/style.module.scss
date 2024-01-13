@@ -1,0 +1,50 @@
+.requirement {
+    &__card {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 1rem;
+        border: 1px solid rgba(240, 240, 240, 1);
+        border-radius: 16px;
+        box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.6);
+
+        & > span {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+    }
+
+    &__doc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        & > img {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    &__box {
+        display: flex;
+        gap: 20px;
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+
+            & > span:first-child {
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+                border-bottom: 1px solid rgba(240, 240, 240, 1);
+            }
+
+            & > span:last-child {
+                font-size: 1rem;
+                opacity: 0.6;
+            }
+        }
+    }
+}

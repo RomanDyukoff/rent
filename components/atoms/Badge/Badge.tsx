@@ -13,8 +13,8 @@ export const Badge = ({ className }: { className: string }): JSX.Element => {
 			</p>
 			<div className={styles.badge__contact}>
 				<div>
-					<span>Сергей</span>
-					<a href="tel:+375 29 784 4444">+375 29 784 4444</a>
+					<span>Олеся</span>
+					<a href="tel:+375298393593">+375298393593</a>
 				</div>
 				<div>
 					<a href="#">
