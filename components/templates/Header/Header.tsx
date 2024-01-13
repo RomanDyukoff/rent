@@ -25,6 +25,7 @@ export const Header = (): JSX.Element => {
 				<Navigation classNames={styles.header__nav} navItems={items} />
 				<a className={styles.header__link} href="tel:+375 29 784 4444">
 					<Image src={phone} alt='phone' />
+					+375 29 784 4444
 				</a>
 			</Container>
 		</header>
