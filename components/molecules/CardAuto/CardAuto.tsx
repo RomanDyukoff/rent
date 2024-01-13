@@ -3,11 +3,10 @@ import styles from "./card-auto.module.scss";
 import Image from "next/image";
 import { Title } from "@/components/atoms/Title/Title";
 import { CardAutoType } from "@/const/interfaces";
-import car from "@/public/assets/img/ford-focus-universal.jpg";
 
 const cx = cnBind.bind(styles);
 
-export const CardAuto = ({ name = "", img = car, money = "", year = "", weight = "", height = "" }: CardAutoType) => {
+export const CardAuto = ({ name , img , money , year , weight , height  }: CardAutoType): JSX.Element => {
 
     return (
         <div className={cx("container")}>

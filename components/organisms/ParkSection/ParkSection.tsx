@@ -6,7 +6,7 @@ import { listCars } from "@/const/listCars";
 
 const cx = cnBind.bind(styles);
 
-export const ParkSection = () => {
+export const ParkSection = (): JSX.Element => {
     return (
         <Container>
             <section id="park" className={cx("wrapper")}>

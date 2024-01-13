@@ -1,4 +1,4 @@
-export default function CarInfo() {
+export default function CarInfo(): JSX.Element {
     return (
         <div>
             car
