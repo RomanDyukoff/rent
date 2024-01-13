@@ -11,14 +11,17 @@
     .logo {
       display: flex;
       flex-direction: column;
-      flex: 0 1 100%;
+      flex: 0 1 68%;
       gap: 30px;
     }
 
-    .panel{
+    .panel {
       display: flex;
       gap: 40px;
 
+      .contact{
+        flex: 1 0 51%;
+      }
       .nav, .contact {
         display: flex;
         flex-direction: column;
@@ -27,6 +30,13 @@
           font-size: 24px;
           color: #525252;
           margin-bottom: 15px;
+        }
+
+        .menu {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          align-items: flex-end;
         }
 
         .links, .header__nav {
@@ -38,21 +48,29 @@
     }
 
   }
-  
-  @media (min-width: 701px) and (max-width: 1440px) {
-    .footer-container{
+
+  @media (min-width: 701px) and (max-width: 1140px) {
+    .footer-container {
       height: 200px;
+      .logo {
+        flex: 0 1 52%;
+      }
     }
   }
+
   @media (max-width: 700px) {
-    .footer-container{
+    .footer-container {
       flex-direction: column;
     }
   }
 
   @media (max-width: 415px) {
-    .panel{
+    .panel {
       flex-direction: column;
+      .menu {
+        align-items: flex-start !important;
+      }
     }
+
   }
 }

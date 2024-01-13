@@ -6,7 +6,7 @@ import { CardAutoType } from "@/const/interfaces";
 
 const cx = cnBind.bind(styles);
 
-export const CardAuto = ({ name , img , money , year , weight , height  }: CardAutoType): JSX.Element => {
+export const CardAuto = ({ name, img, money, year, weight, height, type }: CardAutoType): JSX.Element => {
 
     return (
         <div className={cx("container")}>
@@ -17,10 +17,11 @@ export const CardAuto = ({ name , img , money , year , weight , height  }: CardA
                 <div className={cx("description")}>
                     <Title levet="h2" classNames={cx("caption")}>{name}</Title>
                     <div className={cx("items")}>
-                        <span className={cx("item")}>год выпуска: {year}</span>
-                        <span className={cx("item")}>допустимый вес: {weight}</span>
-                        <span className={cx("item")}>высота: {height}</span>
-                        <span className={cx("item")}>цена от: {money} руб/сутки</span>
+                        <span className={cx("item")}>год выпуска: <strong>{year}</strong></span>
+                        <span className={cx("item")}>тип: <strong>{type}</strong></span>
+                        <span className={cx("item")}>допустимый вес: <strong>{weight}</strong></span>
+                        <span className={cx("item")}>высота: <strong>{height}</strong></span>
+                        <span className={cx("item")}>цена от: <strong>{money}</strong> руб/сутки</span>
                     </div>
                 </div>
             </div>

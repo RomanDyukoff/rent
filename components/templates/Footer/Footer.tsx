@@ -21,13 +21,13 @@ export const Footer = () => {
                 <div className={cx("panel")}>
                     <div className={cx("nav")}>
                         <Title classNames={cx("caption")}>Основное</Title>
-                        <NavList classNames={"header__nav"} navItems={items} />
+                        <NavList classNames={cx("menu")} navItems={items} />
                     </div>
                     <div className={cx("contact")}>
                         <Title classNames={cx("caption")}>Контакты</Title>
                         <div className={cx("links")}>
                             <div className={cx("phone")}>
-                                <a href="/" target="_blank">+3752985745</a>
+                                <a href="tel:+375298393593" target="_blank">+375 (29) 839-35-93</a>
                             </div>
                             <a href="/" target="_blank"></a>
                             <a href="/" target="_blank"></a>
