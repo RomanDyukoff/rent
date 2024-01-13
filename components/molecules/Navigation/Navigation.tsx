@@ -46,9 +46,9 @@ export const Navigation = ({
 	return (
 		<nav className={`${classNames} ${styles.navigation}`}>
 
-			<a className={styles.navigation__link} href="tel:+375 29 784 4444">
+			<a className={styles.navigation__link} href="tel:+375298393593">
 				<Image src={phone} alt='phone' />
-				+375 29 784 4444
+				+375 29 839 35 93
 			</a>
 
 			<button
