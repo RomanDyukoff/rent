@@ -1,0 +1,12 @@
+.requirement {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        & > li {
+            & > img {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+}

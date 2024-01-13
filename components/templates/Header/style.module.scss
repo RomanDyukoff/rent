@@ -1,4 +1,5 @@
 $media-breakpoint: 768px;
+$media-sm: 900px;
 
 .header {
     padding: 20px 0;
@@ -20,9 +21,19 @@ $media-breakpoint: 768px;
     }
 
     &__link {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
         & > img {
-            width: 2rem;
-            height: 2rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    @media (max-width: $media-sm) and (min-width: $media-breakpoint) {
+        &__title {
+            font-size: 20px;
         }
     }
 
