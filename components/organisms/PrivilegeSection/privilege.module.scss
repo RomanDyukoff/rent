@@ -1,0 +1,15 @@
+.wrapper{
+  margin: 40px 0 65px;
+
+  .title{
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 32px;
+  }
+  .list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}

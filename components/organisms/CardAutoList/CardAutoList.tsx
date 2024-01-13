@@ -5,7 +5,7 @@ import type { CardAutoType } from "@/const/interfaces";
 export const CardAutoList = ({ listCards }: { listCards: CardAutoType[] }): JSX.Element => {
     return (
         <>
-            {listCards.map(car => <CardAuto {...car} />)}
+            {listCards.map((car,i) => <CardAuto key={i} {...car} />)}
         </>
     );
 };
