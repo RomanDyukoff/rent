@@ -4,6 +4,8 @@ import styles from "./footer.module.scss";
 import cnBind from "classnames/bind";
 import { Title } from "@/components/atoms/Title/Title";
 import { Navigation } from "@/components/molecules/Navigation/Navigation";
+import { items } from "@/const/links";
+import { NavList } from "@/components/atoms/NavList/NavList";
 
 const cx = cnBind.bind(styles);
 export const Footer = () => {
@@ -19,7 +21,7 @@ export const Footer = () => {
                 <div className={cx("panel")}>
                     <div className={cx("nav")}>
                         <Title classNames={cx("caption")}>Основное</Title>
-                        <Navigation classNames={"header__nav"} navItems={[]} />
+                        <NavList classNames={"header__nav"} navItems={items} />
                     </div>
                     <div className={cx("contact")}>
                         <Title classNames={cx("caption")}>Контакты</Title>
