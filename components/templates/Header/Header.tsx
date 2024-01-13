@@ -1,21 +1,8 @@
 import { Container } from '@/components/atoms/Container/Container';
 import { Logo } from '@/components/atoms/Logo/Logo';
-import type { NavItemProps } from '@/components/atoms/NavItem/NavItem';
 import { Navigation } from '@/components/molecules/Navigation/Navigation';
-
-import phone from '@/public/phone.svg'
-
-
-
 import styles from './style.module.scss';
-import Image from 'next/image';
-
-const items: NavItemProps[] = [
-	{ href: '#about', label: 'О Нас' },
-	{ href: '#park', label: 'Парк' },
-	{ href: '#requi', label: 'Условия' },
-	{ href: '#contacts', label: 'Контакты' },
-];
+import { items } from "@/const/links";
 
 export const Header = (): JSX.Element => {
 	return (
