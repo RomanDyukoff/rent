@@ -1,4 +1,4 @@
-import { PrivilegeSection } from '@/components/organisms/PrivilegeSection/PrivilegeSection';
+import { AboutSection } from '@/components/organisms/AboutSection/AboutSection';
 import { ContactsSection } from '@/components/organisms/ContactsSection/ContactsSection';
 import { ParkSection } from '@/components/organisms/ParkSection/ParkSection';
 import { RequirementSection } from '@/components/organisms/RequirementSection/RequirementSection';
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <WelcomeSection />
-      <PrivilegeSection />
+      <AboutSection />
       <ParkSection />
       <RequirementSection />
       <ContactsSection />

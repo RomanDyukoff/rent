@@ -1,22 +1,16 @@
 .welcome {
     position: relative;
     height: 600px;
-
     &__bg {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url("../../../public/arenda.jpg");
+        // background-image: url("../../../public/img/bg.png");
         background-size: cover;
         background-position: center;
-        filter: brightness(40%);
         z-index: -1;
-    }
-
-    &__contacts {
-        display: none;
     }
 
     &__content {
@@ -29,13 +23,27 @@
         width: 600px;
         height: auto;
         padding: 35px 40px;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: #00a08a;
+
+        @media (max-width: 768px) {
+            top: 220px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 576px) {
+            width: 90%;
+            padding: 20px;
+        }
     }
 
     &__text {
         margin: 0;
         text-align: center;
-        font-family: "Forum", sans-serif;
+        font-family: Forum;
         font-size: 40px;
         font-style: normal;
         font-weight: 400;
@@ -43,32 +51,8 @@
         letter-spacing: 3px;
         text-transform: uppercase;
         color: #ffff;
-    }
 
-    @media (max-width: 768px) {
-        height: 500px;
-
-        &__contacts {
-            display: flex;
-        }
-
-        &__content {
-            top: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 500px;
-            padding: 30px;
-            background-color: transparent;
-        }
-    }
-
-    @media (max-width: 576px) {
-        &__content {
-            width: 90%;
-            padding: 20px;
-        }
-
-        &__text {
+        @media (max-width: 576px) {
             font-size: 1.5rem;
         }
     }

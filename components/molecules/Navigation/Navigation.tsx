@@ -32,7 +32,6 @@ export const Navigation = ({
 			}
 		};
 
-
 		document.addEventListener('keydown', handleKeyDown);
 
 		return () => {
