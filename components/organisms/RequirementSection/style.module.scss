@@ -1,82 +1,139 @@
 .requirement {
-  &__card {
-    flex: 1 1 auto;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 1rem;
-    border: 1px solid rgba(240, 240, 240, 1);
-    border-radius: 16px;
-    box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.6);
-
-    & > span {
-      font-size: 1.875rem;
-      font-weight: 700;
+    margin: 60px 0;
+    &__title {
+        margin-bottom: 60px !important;
+        text-align: center;
+        font-size: 2rem !important;
+        line-height: 36px;
     }
-  }
 
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
+    &__card {
+        flex: 1 1 auto;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 1rem;
+        border: 1px solid rgba(240, 240, 240, 1);
+        border-radius: 16px;
+        box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.6);
 
-  &__docs {
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  &__doc {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-
-    & > img {
-      width: 2rem;
-      height: 2rem;
+        & > span {
+            font-size: 1rem;
+            font-weight: 700;
+        }
     }
-  }
 
-  &__box {
-    display: flex;
-    gap: 1.5rem;
-
-    & > div {
-      display: flex;
-      flex-direction: column;
-
-      & > span:first-child {
-        font-size: 1.875rem;
-        line-height: 2.25rem;
-        border-bottom: 1px solid rgba(240, 240, 240, 1);
-      }
-
-      & > span:last-child {
-        font-size: 1rem;
-        opacity: 0.6;
-      }
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
     }
-  }
-  &__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: normal;
-    gap: 1rem;
 
-    & > li {
-      padding: 1rem;
-      border: 1px solid rgba(240, 240, 240, 1);
-      border-radius: 16px;
-      box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.6);
-      font-size: 1.5rem;
-
-      &::first-letter {
-        text-transform: uppercase;
-      }
+    &__docs {
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
     }
-  }
+
+    &__doc {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 30px;
+        width: 100%;
+        flex: 1 1 45%;
+
+        & > img {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        & > span {
+            font-size: 1.875rem;
+            border-bottom: 1px solid rgba(240, 240, 240, 1);
+            padding: 1rem;
+        }
+    }
+
+    &__box {
+        display: flex;
+        gap: 1.5rem;
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+
+            & > span:first-child {
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+                border-bottom: 1px solid rgba(240, 240, 240, 1);
+                padding: 1rem;
+            }
+
+            & > span:last-child {
+                font-size: 1rem;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: normal;
+        gap: 1rem;
+
+        & > li {
+            padding: 1rem;
+            border: 1px solid rgba(240, 240, 240, 1);
+            border-radius: 16px;
+            box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.6);
+            font-size: 1.5rem;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__docs {
+            width: 100%;
+        }
+
+        &__doc {
+            & > span {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__box {
+            & > div {
+                & > span:first-child {
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+                }
+            }
+        }
+
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__list {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 576px) {
+        &__list {
+            & > li {
+                font-size: 1.2rem;
+            }
+        }
+    }
 }
