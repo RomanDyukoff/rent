@@ -14,7 +14,7 @@ export const CardAuto = ({ name, img, money, year, weight, height, type }: CardA
             <div className={cx("container")}>
                 <div className={cx("wrapper")}>
                     <div className={cx("view-auto")}>
-                        <Image priority className={cx("img")} src={img} alt={name} />
+                        <Image priority className={cx("img")} src={img} alt="Авто в аренду" />
                     </div>
                     <div className={cx("description")}>
                         <Title levet="h2" classNames={cx("caption")}>{name}</Title>
