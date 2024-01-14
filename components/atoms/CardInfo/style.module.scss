@@ -1,0 +1,43 @@
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  &__img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    filter: brightness(40%);
+  }
+
+  &__items{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-direction: column;
+
+
+    .item-color{
+      font-weight: 600;
+      color: #F76603;
+      display: block;
+      font-size: 35px;
+      text-align: center;
+    }
+    & span{
+      z-index: 1;
+      color: #fff;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin: auto;
+      text-align: center;
+      text-shadow: 2px 2px 5px black;
+    }
+  }
+
+}

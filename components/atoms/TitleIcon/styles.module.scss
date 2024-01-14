@@ -1,0 +1,28 @@
+.item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+
+  .check:before {
+    content: '\2713';
+    color: rgba(190, 137, 65, 0.68);
+    font-size: 22px;
+  }
+
+}
+
+@media (min-width: 716px) and (max-width: 1440px) {
+  .item {
+    width: 360px;
+  }
+}
+
+@media (max-width: 715px) {
+  .item {
+    align-items: center;
+    gap: 20px;
+  }
+}
