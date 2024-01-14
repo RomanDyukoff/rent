@@ -9,7 +9,7 @@ const cx = cnBind.bind(styles);
 
 export const ContactsSection = (): JSX.Element => {
     return (
-        <section className={cx("contacts", "section-container")} id="contacts">
+        <section className={cx("contacts")} id="contacts">
             <Container>
                 <div className={cx("contacts__content")}>
                     <div className={cx("info")}>
