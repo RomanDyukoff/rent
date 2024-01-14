@@ -1,0 +1,142 @@
+.car {
+    height: 180vh;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 36px;
+        line-height: 40px;
+        padding: 1rem;
+    }
+
+    &__subtitle {
+        text-align: center;
+        font-size: 26px;
+        line-height: 30px;
+        padding: 1rem;
+    }
+
+    &__form {
+        max-width: 500px;
+    }
+
+    &__descriptions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__image {
+        flex: 0 1 48%;
+        border-radius: 1rem;
+        box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__list {
+        flex: 0 0 48%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px solid #f0f0f0;
+        border-radius: 16px;
+        box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.6);
+
+        & > li:nth-child(2n) {
+            background-color: #f4f4f2;
+        }
+
+        & > li {
+            width: 100%;
+            padding: 0.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__wrapper {
+            gap: 20px;
+        }
+        &__descriptions {
+            flex-direction: column;
+        }
+    }
+}
+
+.descriptions {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 30px;
+
+    &__head {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 30px 30px;
+        flex-wrap: wrap;
+    }
+
+    &__done {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        & > img {
+            width: 2rem;
+            height: 2rem;
+            object-fit: contain;
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px 50px;
+    }
+
+    &__item {
+        position: relative;
+        display: inline-block;
+    }
+
+    &__image {
+        position: relative;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(40%);
+            transition: transform 0.6s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+    }
+
+    &__text {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        color: #fff;
+        transform: translate(-50%, -50%);
+    }
+}

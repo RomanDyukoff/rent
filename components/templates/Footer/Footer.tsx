@@ -6,6 +6,9 @@ import { Title } from "@/components/atoms/Title/Title";
 import { Navigation } from "@/components/molecules/Navigation/Navigation";
 import { items } from "@/const/links";
 import { NavList } from "@/components/atoms/NavList/NavList";
+import Image from "next/image";
+import logo from "@/public/logo.svg";
+import { Logo } from "@/components/atoms/Logo/Logo";
 
 const cx = cnBind.bind(styles);
 export const Footer = () => {
@@ -13,7 +16,12 @@ export const Footer = () => {
         <footer className={cx("footer")}>
             <Container classNames={cx("footer-container")}>
                 <div className={cx("logo")}>
-                    Название фирмы(Может даже пнг)
+                    <Logo
+                        classNames={cx("footer__logo")}
+                        children={
+                            <Image src={logo} alt='logo' />
+                        }
+                    />
                     <span>
                         Название организации и УНП
                     </span>

@@ -43,7 +43,7 @@ export const RequirementSection = () => {
 						</div>
 
 						<div className={styles.requirement__card}>
-							<span>Для аренды потребуется:</span>
+							<span>Для аренды потребуются:</span>
 							<div className={styles.requirement__doc}>
 								<Image src={licence} alt='licence' />
 								<span>Водительские права</span>
