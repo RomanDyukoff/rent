@@ -1,13 +1,9 @@
-import { Container } from '@/components/atoms/Container/Container';
-import styles from './style.module.scss'
-
+import { CarPadge } from '@/components/organisms/CarPadge/CarPadge';
 
 export default function CarInfo(): JSX.Element {
     return (
-        <section className={styles.car}>
-            <Container>
-                <h1 className={styles.car__title}>Описание авто</h1>
-            </Container>
+        <section>
+            <CarPadge />
         </section>
     );
 };
