@@ -1,7 +1,9 @@
+import { CarPadge } from '@/components/organisms/CarPadge/CarPadge';
+
 export default function CarInfo(): JSX.Element {
     return (
-        <div>
-            car
-        </div>
+        <section>
+            <CarPadge />
+        </section>
     );
 };
