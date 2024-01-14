@@ -4,12 +4,14 @@ import { Title } from '../Title/Title';
 
 interface LogoProps {
 	classNames?: string;
+	children?: React.ReactNode;
 }
 
-export const Logo = ({ classNames = '' }: LogoProps): JSX.Element => {
+export const Logo = ({ classNames = '', children = null }: LogoProps): JSX.Element => {
 	return (
-		<Title classNames={classNames}>
-			<Link href="/">Название фирмы</Link>
-		</Title>
+		<Link className={classNames} href="/">
+			{children}
+		</Link>
+
 	);
 };

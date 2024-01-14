@@ -10,7 +10,7 @@ export const WelcomeSection = (): JSX.Element => {
 			<Container>
 				<Badge className={styles.welcome__contacts} />
 				<div className={styles.welcome__content}>
-					<p className={styles.welcome__text}>Аренда грузовых авто в Витебске</p>
+					<h1 className={styles.welcome__text}>Аренда грузовых авто в Витебске</h1>
 				</div>
 			</Container>
 		</section>

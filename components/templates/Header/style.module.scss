@@ -10,14 +10,16 @@ $media-sm: 768px;
         align-items: center;
         justify-content: space-between;
     }
-    &__title {
-        margin: 0;
-        color: #000;
-        font-family: Forum, sans-serif;
-        font-size: 30px;
-        font-weight: 400;
-        letter-spacing: 0.6px;
-        text-transform: capitalize;
+
+    &__logo {
+        display: block;
+        width: 4rem;
+        height: 2.5rem;
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     &__link {
@@ -30,9 +32,9 @@ $media-sm: 768px;
         }
     }
 
-    @media (max-width: $media-sm) {
-        &__link {
-            display: none;
-        }
-    }
+    // @media (max-width: $media-sm) {
+    //     &__link {
+    //         display: none;
+    //     }
+    // }
 }

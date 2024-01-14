@@ -24,14 +24,14 @@ $media-sm: 768px;
     &__content {
         position: relative;
         top: 220px;
-        left: -20px;
+        left: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 600px;
         height: auto;
         padding: 35px 40px;
-        background-color: rgba(0, 0, 0, 0.5);
+        transform: translate(-50%, 0);
     }
 
     &__text {
