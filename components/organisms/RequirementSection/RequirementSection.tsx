@@ -6,7 +6,20 @@ import Image from 'next/image'
 import licence from '@/public/license.svg'
 import passport from '@/public/passport.svg'
 
+const items: string[] = [
+	"автомобиль выдаётся чистым",
+	"принимается в чистом виде",
+	"с наличием топлива не горевшей лампочки",
+	"исходным количеством топлива",
+	"Без взимания оплаты платных дорог",
+]
+
+const createItem = (string: string): JSX.Element => {
+	return <li>{string}</li>
+}
+
 export const RequirementSection = () => {
+
 	return (
 		<section id='requi' className={styles.requirement}>
 			<Container>
@@ -33,21 +46,21 @@ export const RequirementSection = () => {
 							<span>Для аренды потребуется:</span>
 							<div className={styles.requirement__doc}>
 								<Image src={licence} alt='licence' />
-								<span>Права</span>
+								<span>Водительские права</span>
 							</div>
 							<div className={styles.requirement__doc}>
 								<Image src={passport} alt='passport' />
-								<span>Паспорт</span>
+								<span>Паспорт РБ</span>
 							</div>
 						</div>
 					</div>
 
 					<ul className={styles.requirement__list}>
-						<li>автомобиль выдаётся чистым</li>
-						<li>принимается в чистом виде</li>
-						<li>с наличием топлива не горевшей лампочки</li>
-						<li>исходным количеством топлива</li>
-						<li>Без взимания оплаты платных дорог</li>
+						{
+							items.length && items.map(item => (
+								createItem(item)
+							))
+						}
 					</ul>
 
 				</div>
