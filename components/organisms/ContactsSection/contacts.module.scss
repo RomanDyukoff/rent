@@ -1,62 +1,54 @@
 .contacts {
-  background: #f4f4f2;
+    background: #f4f4f2;
 
-  .section-title {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-
-  &__content {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    padding: 40px 0;
-
-    .info {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      flex: 0 1 50%;
-      font-size: 16px;
-      line-height: 20px;
-      text-transform: capitalize;
-
-      p {
-        text-transform: none;
-      }
-
-      @media (max-width: 992px) {
-        width: 100%;
-        gap: 20px;
-        font-size: 12px;
-      }
-
-      &__address {
+    &__content {
         display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: flex-start;
-        gap: 20px;
-        font-weight: 400;
-        font-style: normal;
-      }
-    }
+        justify-content: space-between;
+        gap: 15px;
+        padding: 40px 0;
 
-    @media (max-width: 992px) {
-      flex-direction: column;
-      gap: 50px;
-    }
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            flex: 0 1 50%;
+            font-size: 18px;
+            line-height: 20px;
+            text-transform: capitalize;
 
-    .form{
-      flex: 0 1 50%;
-      &-title{
-        text-align: center;
-        font-size: 24px;
-      }
-    }
-  }
+            p {
+                text-transform: none;
+            }
 
+            @media (max-width: 992px) {
+                width: 100%;
+                gap: 20px;
+                font-size: 14px;
+                text-align: center;
+            }
+
+            &__address {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: flex-start;
+                gap: 20px;
+                font-weight: 400;
+                font-style: normal;
+            }
+        }
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .form {
+            flex: 0 1 50%;
+            &-title {
+                text-align: center;
+                font-size: 24px;
+            }
+        }
+    }
 }
-
-

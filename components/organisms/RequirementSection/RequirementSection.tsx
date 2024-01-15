@@ -1,6 +1,7 @@
 import { Container } from '@/components/atoms/Container/Container'
 import styles from './style.module.scss'
 import { Title } from '@/components/atoms/Title/Title'
+import cnBind from "classnames/bind";
 import Image from 'next/image'
 
 import licence from '@/public/license.svg'
@@ -18,19 +19,23 @@ const createItem = (string: string): JSX.Element => {
 	return <li>{string}</li>
 }
 
+const cx = cnBind.bind(styles);
+
 export const RequirementSection = () => {
 
 	return (
-		<section id='requi' className={styles.requirement}>
+		<section id='requi' className={cx("requirement")}>
 			<Container>
-				<Title classNames={styles.requirement__title} levet="h2" children="Условия аренды авто" />
+				<Title classNames={cx("section-title")} levet="h2">
+					Условия аренды авто
+				</Title>
 
-				<div className={styles.requirement__wrapper}>
+				<div className={cx("requirement__wrapper")}>
 
-					<div className={styles.requirement__docs}>
-						<div className={styles.requirement__card}>
+					<div className={cx("requirement__docs")}>
+						<div className={cx("requirement__card")}>
 							<span>Требования к арендатору</span>
-							<div className={styles.requirement__box}>
+							<div className={cx("requirement__box")}>
 								<div>
 									<span>от 19 лет</span>
 									<span>Возраcт</span>
@@ -42,20 +47,20 @@ export const RequirementSection = () => {
 							</div>
 						</div>
 
-						<div className={styles.requirement__card}>
+						<div className={cx("requirement__card")}>
 							<span>Для аренды потребуются:</span>
-							<div className={styles.requirement__doc}>
+							<div className={cx("requirement__doc")}>
 								<Image src={licence} alt='licence' />
 								<span>Водительские права</span>
 							</div>
-							<div className={styles.requirement__doc}>
+							<div className={cx("requirement__doc")}>
 								<Image src={passport} alt='passport' />
 								<span>Паспорт РБ</span>
 							</div>
 						</div>
 					</div>
 
-					<ul className={styles.requirement__list}>
+					<ul className={cx("requirement__list")}>
 						{
 							items.length && items.map(item => (
 								createItem(item)

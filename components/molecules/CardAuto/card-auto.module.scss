@@ -27,21 +27,19 @@
             }
         }
 
-            .caption{
-                margin-bottom: 20px;
+        .caption {
+            margin-bottom: 20px;
+        }
+        .description,
+        .items {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            .item {
+                height: 35px;
             }
-            .description,
-            .items {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                .item {
-                    height: 35px;
-                }
-            }
-
-
+        }
     }
 }
 
@@ -69,4 +67,8 @@
             }
         }
     }
+}
+
+.car {
+    width: 100%;
 }

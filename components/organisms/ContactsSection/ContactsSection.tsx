@@ -13,7 +13,7 @@ export const ContactsSection = (): JSX.Element => {
             <Container>
                 <div className={cx("contacts__content")}>
                     <div className={cx("info")}>
-                        <Title levet="h2" classNames={cx("section-title", "title")}>
+                        <Title levet="h2" classNames={cx("section-title")}>
                             График работы:
                         </Title>
                         <p className={cx("desc")}>Ежедневно с 08:00-20:00.</p>
@@ -23,8 +23,8 @@ export const ContactsSection = (): JSX.Element => {
                     </div>
 
                     <div className={cx("form")}>
-                        <Title levet="h2" classNames={cx("section-title", "title","form-title")}>
-                            ЗАБРОНИРОВАТЬ АВТО
+                        <Title levet="h2" classNames={cx("section-title")}>
+                            Забронировать авто
                         </Title>
                         <Form />
                     </div>
