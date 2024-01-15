@@ -1,6 +1,7 @@
 import type { StaticImageData } from "next/image";
 
 export interface CardAutoType {
+    id: string,
     img: StaticImageData,
     name: string,
     year: string,

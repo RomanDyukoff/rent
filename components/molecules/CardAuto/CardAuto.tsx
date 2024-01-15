@@ -1,16 +1,18 @@
+'use client'
+
 import cnBind from "classnames/bind";
 import styles from "./card-auto.module.scss";
 import Image from "next/image";
 import { Title } from "@/components/atoms/Title/Title";
 import { CardAutoType } from "@/const/interfaces";
-import { CustomLink } from '@/components/atoms/CustomLink/CustomLink';
+import { AddressContext, CustomLink } from '@/components/atoms/CustomLink/CustomLink';
 
 const cx = cnBind.bind(styles);
 
-export const CardAuto = ({ name, img, money, year, weight, height, type }: CardAutoType): JSX.Element => {
+export const CardAuto = ({ name, img, money, year, weight, height, type, id }: CardAutoType): JSX.Element => {
 
     return (
-        <article className={cx("car")}>
+        <article className={cx("car")} >
             <div className={cx("car__wrapper")}>
                 <div className={cx("car__image")}>
                     <Image priority className={cx("img")} src={img} alt="Авто в аренду" />
@@ -24,7 +26,9 @@ export const CardAuto = ({ name, img, money, year, weight, height, type }: CardA
                         <span className={cx("car__item")}>высота: <strong>{height}</strong></span>
                         <span className={cx("car__item")}>цена от: <strong>{money}</strong> руб/сутки</span>
                     </div>
-                    <CustomLink href='/car' title='подробнее' />
+                    <AddressContext.Provider value={{ href: "car", id: id }}>
+                        <CustomLink title='подробнее' />
+                    </AddressContext.Provider>
                 </div>
             </div>
         </article>
