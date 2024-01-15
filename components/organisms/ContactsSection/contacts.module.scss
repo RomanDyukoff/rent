@@ -14,7 +14,10 @@
             flex: 0 1 50%;
             font-size: 18px;
             line-height: 20px;
-            text-transform: capitalize;
+
+            &::first-letter {
+                text-transform: uppercase;
+            }
 
             p {
                 text-transform: none;
