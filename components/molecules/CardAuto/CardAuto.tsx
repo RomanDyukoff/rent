@@ -10,7 +10,7 @@ const cx = cnBind.bind(styles);
 export const CardAuto = ({ name, img, money, year, weight, height, type }: CardAutoType): JSX.Element => {
 
     return (
-        <Link href="/car">
+        <Link className={cx("car")} href="/car">
             <div className={cx("container")}>
                 <div className={cx("wrapper")}>
                     <div className={cx("view-auto")}>

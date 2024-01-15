@@ -12,8 +12,8 @@ export const ParkSection = (): JSX.Element => {
 
         <section id="park" className={cx("wrapper")}>
             <Container>
-                <Title levet="h2" classNames={cx("park-title")}>
-                    НАШ АВТОПАРК
+                <Title levet="h2" classNames={cx("section-title")}>
+                    наш автопарк
                 </Title>
                 <div className={cx("items")}>
                     <CardAutoList listCards={listCars} />

@@ -1,24 +1,22 @@
 .wrapper {
-  margin: 60px 0;
+    margin: 60px 0;
 
-  .park-title{
-    text-align: center;
-    padding: 30px;
-  }
-
-  .items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  @media (max-width: 1340px) {
-    .items {
-      justify-content: center;
-      gap: 50px;
+    .park-title {
+        text-align: center;
+        padding: 30px;
     }
-  }
+
+    .items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    @media (max-width: 900px) {
+        .items {
+            flex-direction: column;
+        }
+    }
 }
-
-
