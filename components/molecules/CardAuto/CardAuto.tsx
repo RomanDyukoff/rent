@@ -3,31 +3,30 @@ import styles from "./card-auto.module.scss";
 import Image from "next/image";
 import { Title } from "@/components/atoms/Title/Title";
 import { CardAutoType } from "@/const/interfaces";
-import Link from "next/link";
+import { CustomLink } from '@/components/atoms/CustomLink/CustomLink';
 
 const cx = cnBind.bind(styles);
 
 export const CardAuto = ({ name, img, money, year, weight, height, type }: CardAutoType): JSX.Element => {
 
     return (
-        <Link className={cx("car")} href="/car">
-            <div className={cx("container")}>
-                <div className={cx("wrapper")}>
-                    <div className={cx("view-auto")}>
-                        <Image priority className={cx("img")} src={img} alt="Авто в аренду" />
+        <article className={cx("car")}>
+            <div className={cx("car__wrapper")}>
+                <div className={cx("car__image")}>
+                    <Image priority className={cx("img")} src={img} alt="Авто в аренду" />
+                </div>
+                <div className={cx("car__description")}>
+                    <div className={cx("car__list")}>
+                        <Title levet="h3" classNames={cx("car__caption")}>{name}</Title>
+                        <span className={cx("car__item")}>год выпуска: <strong>{year}</strong></span>
+                        <span className={cx("car__item")}>тип: <strong>{type}</strong></span>
+                        <span className={cx("car__item")}>допустимый вес: <strong>{weight}</strong></span>
+                        <span className={cx("car__item")}>высота: <strong>{height}</strong></span>
+                        <span className={cx("car__item")}>цена от: <strong>{money}</strong> руб/сутки</span>
                     </div>
-                    <div className={cx("description")}>
-                        <Title levet="h2" classNames={cx("caption")}>{name}</Title>
-                        <div className={cx("items")}>
-                            <span className={cx("item")}>год выпуска: <strong>{year}</strong></span>
-                            <span className={cx("item")}>тип: <strong>{type}</strong></span>
-                            <span className={cx("item")}>допустимый вес: <strong>{weight}</strong></span>
-                            <span className={cx("item")}>высота: <strong>{height}</strong></span>
-                            <span className={cx("item")}>цена от: <strong>{money}</strong> руб/сутки</span>
-                        </div>
-                    </div>
+                    <CustomLink href='/car' title='подробнее' />
                 </div>
             </div>
-        </Link>
+        </article>
     );
 };

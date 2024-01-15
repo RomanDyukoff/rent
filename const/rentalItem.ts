@@ -8,7 +8,7 @@ export const rentalItem: RentalContitionType[] = [
 	},
 	{
 		img: auto,
-		text: "выберете автомобиль",
+		text: "Выберите автомобиль",
 	},
 	{
 		img: auto,
