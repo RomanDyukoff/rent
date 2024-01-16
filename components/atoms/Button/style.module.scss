@@ -1,15 +1,17 @@
 .button {
     position: relative;
     padding: 15px 40px;
+
+    font-size: 1rem;
+    line-height: 1rem;
+
     background-color: transparent;
-    font-weight: 700;
+    border: 2px solid #f0f0f0;
     border-radius: 1rem;
-    border: none;
-    cursor: pointer;
     outline: none;
+    cursor: pointer;
     text-transform: uppercase;
     box-sizing: border-box;
-    border: 2px solid #f0f0f0;
 
     &:hover {
         transform: translateY(-3px);

@@ -13,7 +13,7 @@ import { Logo } from "@/components/atoms/Logo/Logo";
 const cx = cnBind.bind(styles);
 export const Footer = () => {
     return (
-        <footer className={cx("footer")}>
+        <footer id="about" className={cx("footer")}>
             <Container classNames={cx("footer-container")}>
                 <div className={cx("logo")}>
                     <Logo
