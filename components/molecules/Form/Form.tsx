@@ -40,36 +40,33 @@ export const Form = ({
 
     return (
         <div className={cx("form", classNames)}>
-            <div className={cx("form-field")}>
-                <div className={cx("form-header")}>
-                    <Title levet="h4" classNames={cx("header-h4")}>
-                        Оставьте заявку и мы вам перезвоним
-                    </Title>
-                </div>
-                <div className={cx("form-body")}>
-                    <input
-                        placeholder="Имя..."
-                        type="text"
-                        className={cx("form-input")}
-                        value={form.name}
-                        onChange={(e) => handleChange(e.target.value, "name")}
-                    />
-                    <input
-                        type="tel"
-                        placeholder="+375..."
-                        className={cx("form-input")}
-                        value={form.phone}
-                        required
-                        onChange={(e) => handleChange(e.target.value, "phone")}
-                        maxLength={13}
-                    />
-                </div>
-                <div className={cx("form-footer")}>
-                    <Button classNames={cx("form-btn")} handleAction={() => { }}>
-                        Отправить
-                    </Button>
-                </div>
+            <Title levet="h4" classNames={cx("form__title")}>
+                Оставьте заявку и мы вам перезвоним
+            </Title>
+            <div className={cx("form__inputs")}>
+                <input
+                    placeholder="Имя..."
+                    type="text"
+                    className={cx("form__input")}
+                    value={form.name}
+                    onChange={(e) => handleChange(e.target.value, "name")}
+                />
+                <input
+                    type="tel"
+                    placeholder="+375..."
+                    className={cx("form__input")}
+                    value={form.phone}
+                    required
+                    onChange={(e) => handleChange(e.target.value, "phone")}
+                    maxLength={13}
+                />
             </div>
+            <Button
+                classNames={cx("form__button", "btn", "btn-white", "btn-animate")}
+                handleAction={() => { }}
+            >
+                Отправить
+            </Button>
         </div>
     );
 };
