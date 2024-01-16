@@ -11,7 +11,7 @@ export const Button = ({ disabled, handleAction, classNames, children }: IButton
             aria-label={!children ? "Mute Volume" : ""}
             type="button"
             disabled={disabled}
-            className={cx("button", classNames)}
+            className={cx("button", "button-white", "button-anim", classNames)}
             onClick={handleAction}
         >
             {children}

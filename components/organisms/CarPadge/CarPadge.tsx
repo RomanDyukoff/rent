@@ -16,6 +16,7 @@ import { rentalItem } from '@/const/rentalItem'
 const cx = cnBind.bind(styles);
 
 export const CarPadge = (): JSX.Element => {
+
 	return (
 		<section className={cx("car")}>
 			<Container>
