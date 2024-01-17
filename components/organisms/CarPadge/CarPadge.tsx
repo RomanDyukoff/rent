@@ -16,8 +16,12 @@ import { listCars } from "@/const/listCars";
 
 const cx = cnBind.bind(styles);
 
-export const CarPadge = ({params}:{params: string}): JSX.Element => {
-	console.log(listCars.filter(el => el.id === params));
+export const CarPadge = ({ params }: { params: string }): JSX.Element => {
+
+	const data = listCars.filter(el => el.id === params)[0];
+
+	const { name, type, consumption, fuel, seats, cargospace, height, weight, img } = data;
+
 	return (
 		<section className={cx("car")}>
 			<Container>
@@ -28,17 +32,17 @@ export const CarPadge = ({params}:{params: string}): JSX.Element => {
 
 					<div className={cx("car__descriptions")}>
 						<div className={cx("car__image")}>
-							<Image src={auto} alt='auto' />
+							<Image src={img} alt='auto' />
 						</div>
 						<ul className={cx("car__list")}>
-							<li>Модель: </li>
-							<li>Тип: </li>
-							<li>Расход:</li>
-							<li>Топливо:</li>
-							<li>Количество мест:</li>
-							<li>Грузовой отсек:</li>
-							<li>Высота:</li>
-							<li>Грузоподъёмность:</li>
+							<li>Модель: {name}</li>
+							<li>Тип: {type}</li>
+							<li>Расход: {consumption}</li>
+							<li>Топливо: {fuel}</li>
+							<li>Количество мест: {seats}</li>
+							<li>Грузовой отсек: {cargospace}</li>
+							<li>Высота: {height}</li>
+							<li>Грузоподъёмность: {weight}</li>
 						</ul>
 					</div>
 

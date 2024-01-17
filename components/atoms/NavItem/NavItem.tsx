@@ -1,3 +1,4 @@
+import cnBind from "classnames/bind";
 import styles from './style.module.scss';
 
 export interface NavItemProps {
@@ -5,10 +6,12 @@ export interface NavItemProps {
 	label: string;
 }
 
+const cx = cnBind.bind(styles);
+
 export const NavItem = ({ href, label }: NavItemProps): JSX.Element => {
 	return (
-		<li className={styles.item}>
-			<a className={styles.item__link} href={href}>
+		<li className={cx("item")}>
+			<a className={cx("item__link")} href={href}>
 				{label}
 			</a>
 		</li>

@@ -1,12 +1,7 @@
-.wrapper {
+.park {
     margin: 60px 0;
 
-    .park-title {
-        text-align: center;
-        padding: 30px;
-    }
-
-    .items {
+    &__items {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -15,7 +10,7 @@
     }
 
     @media (max-width: 900px) {
-        .items {
+        &__items {
             flex-direction: column;
         }
     }

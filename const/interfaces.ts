@@ -9,4 +9,8 @@ export interface CardAutoType {
     height: string,
     money: string,
     type: string,
+    fuel?: string,
+    consumption?: string,
+    seats?: string,
+    cargospace?: string,
 }
