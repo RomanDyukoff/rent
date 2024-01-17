@@ -12,9 +12,6 @@ export const AddressContext = React.createContext({ href: '', id: '' })
 
 const cx = cnBind.bind(styles);
 
-console.log(AddressContext);
-
-
 export const CustomLink = ({ title }: CustomLinkType) => {
 	return (
 		<AddressContext.Consumer>

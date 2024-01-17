@@ -32,6 +32,17 @@ export const Form = ({
         return newVal;
     };
 
+
+    const handleSubmit = async () => {
+        await fetch("/api/sendMessage", {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: form.phone,
+        }).then((res) => res.ok);
+    };
+
     const handleChange = (val: string, type: FormInputType) => {
         val = formatter(val, type);
 

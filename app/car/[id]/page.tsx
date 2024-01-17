@@ -1,9 +1,10 @@
 import { CarPadge } from '@/components/organisms/CarPadge/CarPadge';
 
-export default function CarInfo(): JSX.Element {
+export default function CarInfo({params}:{params:{id:string}}): JSX.Element {
+
     return (
         <section>
-            <CarPadge />
+            <CarPadge params={params.id} />
         </section>
     );
 };

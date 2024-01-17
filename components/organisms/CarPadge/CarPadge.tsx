@@ -11,12 +11,13 @@ import { Form } from '@/components/molecules/Form/Form'
 import cnBind from "classnames/bind";
 import { RentalСonditionsList } from '@/components/atoms/RentalСonditionsList/RentalСonditionsList'
 import { rentalItem } from '@/const/rentalItem'
+import { listCars } from "@/const/listCars";
 
 
 const cx = cnBind.bind(styles);
 
-export const CarPadge = (): JSX.Element => {
-
+export const CarPadge = ({params}:{params: string}): JSX.Element => {
+	console.log(listCars.filter(el => el.id === params));
 	return (
 		<section className={cx("car")}>
 			<Container>
