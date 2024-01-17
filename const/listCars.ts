@@ -1,6 +1,6 @@
 import type { CardAutoType } from "@/const/interfaces";
-import CarOne from "@/public/assets/img/ford-focus-universal.jpg"
-import CarTwo from "@/public/assets/img/hyundai-h1-2019.jpg"
+import CarOne from "@/public/assets/img/gaz1.png"
+import CarTwo from "@/public/assets/img/gaz2.png"
 
 export const listCars: CardAutoType[] = [
     {
@@ -11,7 +11,11 @@ export const listCars: CardAutoType[] = [
         height: "1.5м",
         money: "80",
         img: CarOne,
-        type: "грузоперевозка"
+        type: "Фургон",
+        seats: "3 с водителем",
+        fuel: "92 бензин",
+        consumption: "11-12 литров",
+        cargospace: "3 метра",
     },
     {
         id: "2",
@@ -21,6 +25,10 @@ export const listCars: CardAutoType[] = [
         height: "1.5м",
         money: "80",
         img: CarTwo,
-        type: "пассажироперевозка"
+        type: "Грузопассажирский",
+        seats: "7 с водителем",
+        fuel: "92 бензин",
+        consumption: "11-12 литров",
+        cargospace: "2 метра",
     }
 ]

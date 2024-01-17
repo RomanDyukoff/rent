@@ -1,10 +1,14 @@
 import { CarPadge } from '@/components/organisms/CarPadge/CarPadge';
 
-export default function CarInfo({params}:{params:{id:string}}): JSX.Element {
+type Props = {
+    params: {
+        id: string;
+    }
+}
+
+export default function CarInfo({ params: { id } }: Props): JSX.Element {
 
     return (
-        <section>
-            <CarPadge params={params.id} />
-        </section>
+        <CarPadge params={id} />
     );
 };

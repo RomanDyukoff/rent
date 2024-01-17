@@ -10,12 +10,12 @@ const cx = cnBind.bind(styles);
 export const ParkSection = (): JSX.Element => {
     return (
 
-        <section id="park" className={cx("wrapper")}>
+        <section id="park" className={cx("park")}>
             <Container>
                 <Title levet="h2" classNames={cx("section-title")}>
                     наш автопарк
                 </Title>
-                <div className={cx("items")}>
+                <div className={cx("park__items")}>
                     <CardAutoList listCards={listCars} />
                 </div>
             </Container>

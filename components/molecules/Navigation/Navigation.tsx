@@ -2,6 +2,7 @@
 
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import { useCallback, useEffect, useState } from 'react';
+import cnBind from "classnames/bind";
 
 import type { NavItemProps } from '../../atoms/NavItem/NavItem';
 import { NavList } from '../../atoms/NavList/NavList';
@@ -16,6 +17,8 @@ interface NavigationProps {
 	children?: React.ReactNode;
 	navItems: NavItemProps[];
 }
+
+const cx = cnBind.bind(styles);
 
 export const Navigation = ({
 	classNames = '',
@@ -44,16 +47,16 @@ export const Navigation = ({
 	}, []);
 
 	return (
-		<nav className={`${classNames} ${styles.navigation}`}>
+		<nav className={cx(`${classNames}`, "navigation")}>
 
-			<a className={styles.navigation__link} href="tel:+375298393593">
+			<a className={cx("navigation__link")} href="tel:+375298393593">
 				<Image src={phone} alt='phone' />
 				+375 29 839 35 93
 			</a>
 
 			<button
 				onClick={toggleButton}
-				className={`${styles.navigation__burger} ${isOpen ? `${styles.open}` : ''}`}
+				className={cx("navigation__burger", `${isOpen ? "open" : ""}`)}
 				aria-expanded={isOpen}
 				type="button"
 			>
@@ -62,11 +65,11 @@ export const Navigation = ({
 				<div />
 			</button>
 			<div
-				className={`${styles.navigation__menu} ${isOpen ? `${styles.open}` : ''}`}
+				className={cx("navigation__menu", `${isOpen ? "open" : ""}`)}
 				aria-hidden={!isOpen}
 			>
 				{children}
-				<NavList classNames={styles.navigation__list} navItems={navItems} />
+				<NavList classNames={cx("navigation__list")} navItems={navItems} />
 			</div>
 		</nav>
 	);
