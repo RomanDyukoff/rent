@@ -26,7 +26,7 @@ export const CarPadge = ({ params }: { params: string }): JSX.Element => {
 		<section className={cx("car")}>
 			<Container>
 				<div className={cx("car__wrapper")}>
-					<Title classNames={cx("car__title")}>
+					<Title id="auto" classNames={cx("car__title")}>
 						Описание авто
 					</Title>
 
@@ -46,7 +46,7 @@ export const CarPadge = ({ params }: { params: string }): JSX.Element => {
 						</ul>
 					</div>
 
-					<Title classNames={cx("section-title")} levet='h2'>
+					<Title id="requi" classNames={cx("section-title")} levet='h2'>
 						Условия аренды
 					</Title>
 
