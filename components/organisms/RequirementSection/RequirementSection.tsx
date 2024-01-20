@@ -67,8 +67,11 @@ export const RequirementSection = () => {
 							))
 						}
 					</ul>
-
+					<Title classNames={cx("requirement__subtitle")} levet='h3'>
+						сотрудничаем с организациями и юр лицами
+					</Title>
 				</div>
+
 
 			</Container>
 		</section>

@@ -8,6 +8,10 @@
         line-height: 36px;
     }
 
+    &__subtitle {
+        text-transform: uppercase;
+    }
+
     &__card {
         flex: 1 1 auto;
         display: inline-flex;
@@ -30,6 +34,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         gap: 50px;
     }
 
