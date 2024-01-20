@@ -6,3 +6,10 @@ export const items: NavItemProps[] = [
     { href: '#requi', label: 'Условия' },
     { href: '#about', label: 'О Нас' },
 ];
+
+export const itemsCar: NavItemProps[] = [
+    { href: '#auto', label: 'Авто' },
+    { href: '#requi', label: 'Условия' },
+    { href: '#contacts', label: 'Контакты' },
+    { href: '#about', label: 'О Нас' },
+];

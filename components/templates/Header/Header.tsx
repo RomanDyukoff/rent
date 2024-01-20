@@ -1,23 +1,31 @@
+"use client"
+
 import { Container } from '@/components/atoms/Container/Container';
 import { Logo } from '@/components/atoms/Logo/Logo';
 import { Navigation } from '@/components/molecules/Navigation/Navigation';
 import styles from './style.module.scss';
-import { items } from "@/const/links";
-import Image from 'next/image';
+import { items, itemsCar } from "@/const/links";
 
 import logo from "@/public/logo.svg"
+import { useParams } from 'next/navigation';
+import { NavItemProps } from '@/components/atoms/NavItem/NavItem';
+import { useState, useEffect } from 'react';
 
 export const Header = (): JSX.Element => {
+	const { id } = useParams()
+	const [navLink, setNavLink] = useState<NavItemProps[]>([])
+
+	useEffect(() => {
+		setNavLink(id ? itemsCar : items)
+	}, [id])
+
 	return (
 		<header className={styles.header}>
 			<Container classNames={styles.header__container}>
 				<Logo
-					classNames={styles.header__logo}
-					children={
-						<Image src={logo} alt='logo' />
-					}
+					classNames={styles.header__logo} src={logo}
 				/>
-				<Navigation classNames={styles.header__nav} navItems={items} />
+				<Navigation classNames={styles.header__nav} navItems={navLink} />
 			</Container>
 		</header>
 	);

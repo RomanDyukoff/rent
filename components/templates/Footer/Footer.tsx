@@ -1,26 +1,35 @@
-import { Container } from "@/components/atoms/Container/Container";
+"use client"
 
+import { Container } from "@/components/atoms/Container/Container";
 import styles from "./footer.module.scss";
 import cnBind from "classnames/bind";
 import { Title } from "@/components/atoms/Title/Title";
-import { Navigation } from "@/components/molecules/Navigation/Navigation";
-import { items } from "@/const/links";
+import { items, itemsCar } from "@/const/links";
 import { NavList } from "@/components/atoms/NavList/NavList";
 import Image from "next/image";
 import logo from "@/public/logo.svg";
 import { Logo } from "@/components/atoms/Logo/Logo";
+import { useParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { NavItemProps } from '@/components/atoms/NavItem/NavItem';
 
 const cx = cnBind.bind(styles);
 export const Footer = () => {
+
+    const { id } = useParams()
+    const [navLink, setNavLink] = useState<NavItemProps[]>([])
+
+    useEffect(() => {
+        setNavLink(id ? itemsCar : items)
+    }, [id])
+
     return (
         <footer id="about" className={cx("footer")}>
             <Container classNames={cx("footer-container")}>
                 <div className={cx("logo")}>
                     <Logo
                         classNames={cx("footer__logo")}
-                        children={
-                            <Image src={logo} alt='logo' />
-                        }
+                        src={logo}
                     />
                     <span>
                         Название организации и УНП
@@ -29,7 +38,7 @@ export const Footer = () => {
                 <div className={cx("panel")}>
                     <div className={cx("nav")}>
                         <Title classNames={cx("caption")}>Основное</Title>
-                        <NavList classNames={cx("menu")} navItems={items} />
+                        <NavList classNames={cx("menu")} navItems={navLink} />
                     </div>
                     <div className={cx("contact")}>
                         <Title classNames={cx("caption")}>Контакты</Title>

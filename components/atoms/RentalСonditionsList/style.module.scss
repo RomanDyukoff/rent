@@ -9,6 +9,7 @@
         border-radius: 50%;
         width: 200px;
         height: 200px;
+        box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.6);
         overflow: hidden;
         & > img {
             width: 100%;
