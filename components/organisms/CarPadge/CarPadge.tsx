@@ -1,17 +1,16 @@
-"use client"
+// "use client"
 
 import { Container } from '@/components/atoms/Container/Container'
 import styles from './style.module.scss'
 import { Title } from '@/components/atoms/Title/Title'
 import Image from 'next/image'
 
-import auto from '@/public/arenda.jpg'
 import done from '@/public/done.svg'
-import { Form } from '@/components/molecules/Form/Form'
 import cnBind from "classnames/bind";
 import { RentalСonditionsList } from '@/components/atoms/RentalСonditionsList/RentalСonditionsList'
 import { rentalItem } from '@/const/rentalItem'
 import { listCars } from "@/const/listCars";
+
 
 
 const cx = cnBind.bind(styles);
@@ -72,8 +71,6 @@ export const CarPadge = ({ params }: { params: string }): JSX.Element => {
 						/>
 
 					</div>
-
-					<Form classNames={cx("car__form")} />
 
 				</div>
 			</Container>

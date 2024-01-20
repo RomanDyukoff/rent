@@ -1,16 +1,16 @@
 import Link from 'next/link';
+import Image, { StaticImageData } from 'next/image';
 
-import { Title } from '../Title/Title';
 
 interface LogoProps {
 	classNames?: string;
-	children?: React.ReactNode;
+	src: StaticImageData;
 }
 
-export const Logo = ({ classNames = '', children = null }: LogoProps): JSX.Element => {
+export const Logo = ({ classNames = '', src }: LogoProps): JSX.Element => {
 	return (
 		<Link className={classNames} href="/">
-			{children}
+			<Image src={src} alt='logo' />
 		</Link>
 
 	);

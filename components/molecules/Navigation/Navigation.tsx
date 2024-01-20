@@ -1,6 +1,5 @@
 'use client';
 
-/* eslint-disable jsx-a11y/control-has-associated-label */
 import { useCallback, useEffect, useState } from 'react';
 import cnBind from "classnames/bind";
 
@@ -37,6 +36,12 @@ export const Navigation = ({
 				setIsOpen(false);
 			}
 		};
+
+		// const handleOutClick = (event: Event): void => {
+		// 	if (event) {
+		// 		setIsOpen(false);
+		// 	}
+		// };
 
 
 		document.addEventListener('keydown', handleKeyDown);

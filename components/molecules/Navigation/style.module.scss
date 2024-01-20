@@ -16,6 +16,10 @@ $media-lg: 900px;
             width: 1.5rem;
             height: 1.5rem;
         }
+
+        &:hover img {
+            animation: rotatePhone 0.5s ease-in-out infinite;
+        }
     }
 
     &__burger {
@@ -125,5 +129,17 @@ $media-lg: 900px;
     }
     100% {
         right: 0;
+    }
+}
+
+@keyframes rotatePhone {
+    0% {
+        transform: rotate(30deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(30deg);
     }
 }
