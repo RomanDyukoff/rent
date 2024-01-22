@@ -26,6 +26,12 @@
           object-fit: cover;
         }
       }
+
+      .footer__info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
     }
 
     .panel {

@@ -6,7 +6,6 @@ import cnBind from "classnames/bind";
 import { Title } from "@/components/atoms/Title/Title";
 import { items, itemsCar } from "@/const/links";
 import { NavList } from "@/components/atoms/NavList/NavList";
-import Image from "next/image";
 import logo from "@/public/logo.svg";
 import { Logo } from "@/components/atoms/Logo/Logo";
 import { useParams } from 'next/navigation';
@@ -31,9 +30,15 @@ export const Footer = () => {
                         classNames={cx("footer__logo")}
                         src={logo}
                     />
-                    <span>
-                        Название организации и УНП
-                    </span>
+                    <div className={cx("footer__info")}>
+                        <span>
+                            ИП Прудников Сергей Олегович
+                        </span>
+                        <span>
+                            УНП 391818928
+                        </span>
+                    </div>
+                   
                 </div>
                 <div className={cx("panel")}>
                     <div className={cx("nav")}>
