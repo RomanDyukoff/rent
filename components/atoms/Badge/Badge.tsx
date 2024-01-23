@@ -1,3 +1,4 @@
+import cnBind from "classnames/bind";
 import Image from 'next/image';
 import telegram from '@/public/telegram.svg'
 import viber from '@/public/viber.svg'
@@ -5,13 +6,15 @@ import viber from '@/public/viber.svg'
 
 import styles from './style.module.scss'
 
+const cx = cnBind.bind(styles);
+
 export const Badge = ({ className }: { className: string }): JSX.Element => {
 	return (
-		<div className={`${styles.badge} ${className}`}>
+		<div className={cx(`${className}`, "badge")}>
 			<p>
 				Tелефон для связи
 			</p>
-			<div className={styles.badge__contact}>
+			<div className={cx("badge__contact")}>
 				<div>
 					<span>Олеся</span>
 					<a href="tel:+375298393593">+375298393593</a>
