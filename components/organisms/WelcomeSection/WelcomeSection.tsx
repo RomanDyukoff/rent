@@ -12,7 +12,7 @@ export const WelcomeSection = (): JSX.Element => {
 		<section className={cx("welcome")} id="welcome">
 			<div className={cx("welcome__bg")} />
 			<Container>
-				<Badge className={cx("welcome__contacts")} />
+				<Badge />
 				<div className={cx("welcome__content")}>
 					<Title classNames={cx("welcome__text")}>
 						Аренда грузовых авто в Витебске

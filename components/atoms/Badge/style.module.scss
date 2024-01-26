@@ -1,7 +1,7 @@
 $media-msm: 576px;
 
 .badge {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -60,5 +60,13 @@ $media-msm: 576px;
         &__contact {
             gap: 20px;
         }
+    }
+
+
+}
+
+@media (max-width: 899px) {
+    .badge{
+        display: flex;
     }
 }

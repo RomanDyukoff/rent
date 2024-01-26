@@ -1,11 +1,14 @@
+"use server"
 import nodemailer from "nodemailer";
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextRequest, NextResponse } from "next/server";
+import Mail from "nodemailer/lib/mailer";
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: NextRequest) {
 
-    const phone = req.body;
-    console.log(phone);
+    const phone = await req.json();
+
     const transporter = nodemailer.createTransport({
+        service: 'yandex',
         port: 465,
         host: "smtp.yandex.ru",
         auth: {
@@ -13,21 +16,28 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
             pass: process.env.SMTP_PASSWORD,
         },
         secure: true,
-        tls: {
-            rejectUnauthorized: false,
-        },
     });
+    const mailOptions: Mail.Options = {
+        from: "arendaavtovtb@yandex.by",
+        to: "arendaavtovtb@yandex.by",
+        subject: `Message from ${phone}`,
+        text:  `${phone}`,
+    };
+    const sendMailPromise = () =>
+        new Promise<string>((resolve, reject) => {
+            transporter.sendMail(mailOptions, function (err) {
+                if (!err) {
+                    resolve('Email sent');
+                } else {
+                    reject(err.message);
+                }
+            });
+        });
 
     try {
-        await transporter.sendMail({
-            from: process.env.SMTP_USER,
-            to: "arendaavtovtb@yandex.by",
-            subject: `Contact form submission from ${phone}`,
-            text: `${phone}`,
-        });
-    } catch (error) {
-        return res.status(500).end();
+        await sendMailPromise();
+        return NextResponse.json({ message: 'Email sent' });
+    } catch (err) {
+        return NextResponse.json({ error: err }, { status: 500 });
     }
-
-    return res.status(200).json({ error: "Error" });
-};
+}

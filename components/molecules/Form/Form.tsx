@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react";
 import cnBind from "classnames/bind";
 
@@ -34,13 +35,14 @@ export const Form = ({
 
 
     const handleSubmit = async () => {
-        await fetch("/api/sendMessage", {
+        await fetch("api/feedback/", {
             method: "post",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: form.phone,
+            body: JSON.stringify(form.phone),
         }).then((res) => res.ok);
+        setForm({name:"", phone:"+375"})
     };
 
     const handleChange = (val: string, type: FormInputType) => {
@@ -74,7 +76,7 @@ export const Form = ({
             </div>
             <Button
                 classNames={cx("form__button", "btn", "btn-white", "btn-animate")}
-                handleAction={() => { }}
+                handleAction={handleSubmit}
             >
                 Отправить
             </Button>

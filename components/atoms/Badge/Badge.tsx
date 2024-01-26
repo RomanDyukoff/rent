@@ -8,9 +8,10 @@ import styles from './style.module.scss'
 
 const cx = cnBind.bind(styles);
 
-export const Badge = ({ className }: { className: string }): JSX.Element => {
+export const Badge = (): JSX.Element => {
+
 	return (
-		<div className={cx(`${className}`, "badge")}>
+		<div className={cx( "badge")}>
 			<p>
 				Tелефон для связи
 			</p>
@@ -20,10 +21,10 @@ export const Badge = ({ className }: { className: string }): JSX.Element => {
 					<a href="tel:+375298393593">+375298393593</a>
 				</div>
 				<div>
-					<a href="#">
+					<a href="https://t.me/BogOko" target="_blank">
 						<Image src={telegram} alt='telegram' />
 					</a>
-					<a href="#">
+					<a href="viber://add?+375298393593" target="_blank">
 						<Image src={viber} alt='viber' />
 					</a>
 				</div>
