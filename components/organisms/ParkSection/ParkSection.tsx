@@ -12,11 +12,14 @@ export const ParkSection = (): JSX.Element => {
 
         <section id="park" className={cx("park")}>
             <Container>
-                <Title levet="h2" classNames={cx("section-title")}>
-                    наш автопарк
-                </Title>
-                <div className={cx("park__items")}>
-                    <CardAutoList listCards={listCars} />
+                <div className={cx("park__wrapper")}>
+                    <Title levet="h2" classNames={cx("section-title")}>
+                        Автомобили Avtorental
+                    </Title>
+                    <div className={cx("park__items")}>
+                        <CardAutoList listCards={listCars} />
+                    </div>
+
                 </div>
             </Container>
         </section>

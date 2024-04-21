@@ -65,14 +65,14 @@ $hover-grey-color: #8e8e8e;
     line-height: 36px;
     position: relative;
     margin: 0 0 40px 0;
-    height: 61px;
+    height: max-content;
     text-align: center;
     text-transform: uppercase;
+    padding: 0 0 10px 0;
 
     @media (max-width: 768px) {
         font-size: 24px;
         line-height: 28px;
-        height: 51px;
         margin: 0 0 30px 0;
     }
 }

@@ -11,15 +11,12 @@ const cx = cnBind.bind(styles);
 export const Badge = (): JSX.Element => {
 
 	return (
-		<div className={cx( "badge")}>
+		<div className={cx("badge")}>
 			<p>
 				Tелефон для связи
 			</p>
 			<div className={cx("badge__contact")}>
-				<div>
-					<span>Олеся</span>
-					<a href="tel:+375298393593">+375298393593</a>
-				</div>
+				<a href="tel:+375298393593">+375298393593</a>
 				<div>
 					<a href="https://t.me/BogOko" target="_blank">
 						<Image src={telegram} alt='telegram' />

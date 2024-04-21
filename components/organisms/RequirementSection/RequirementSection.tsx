@@ -25,50 +25,51 @@ export const RequirementSection = () => {
 	return (
 		<section id='requi' className={cx("requirement")}>
 			<Container>
-				<Title classNames={cx("section-title")} levet="h2">
-					Условия аренды авто
-				</Title>
-
 				<div className={cx("requirement__wrapper")}>
-
-					<div className={cx("requirement__docs")}>
-						<div className={cx("requirement__card")}>
-							<span>Требования к арендатору</span>
-							<div className={cx("requirement__box")}>
-								<div>
-									<span>от 19 лет</span>
-									<span>Возраcт</span>
+					<Title classNames={cx("section-title")} levet="h2">
+						Условия аренды авто
+					</Title>
+					<div className={cx("requirement__content")}>
+						<div className={cx("requirement__docs")}>
+							<div className={cx("requirement__card")}>
+								<span>Требования к арендатору</span>
+								<div className={cx("requirement__box")}>
+									<div>
+										<span>от 19 лет</span>
+										<span>Возраcт</span>
+									</div>
+									<div>
+										<span>от 1 года</span>
+										<span>Стаж</span>
+									</div>
 								</div>
-								<div>
-									<span>от 1 года</span>
-									<span>Стаж</span>
+							</div>
+
+							<div className={cx("requirement__card")}>
+								<span>Для аренды потребуются:</span>
+								<div className={cx("requirement__doc")}>
+									<Image src={licence} alt='licence' />
+									<span>Водительские права</span>
+								</div>
+								<div className={cx("requirement__doc")}>
+									<Image src={passport} alt='passport' />
+									<span>Паспорт РБ</span>
 								</div>
 							</div>
 						</div>
 
-						<div className={cx("requirement__card")}>
-							<span>Для аренды потребуются:</span>
-							<div className={cx("requirement__doc")}>
-								<Image src={licence} alt='licence' />
-								<span>Водительские права</span>
-							</div>
-							<div className={cx("requirement__doc")}>
-								<Image src={passport} alt='passport' />
-								<span>Паспорт РБ</span>
-							</div>
-						</div>
+						<ul className={cx("requirement__list")}>
+							{
+								items.length && items.map(item => (
+									createItem(item)
+								))
+							}
+						</ul>
+						<Title classNames={cx("requirement__subtitle")} levet='h3'>
+							сотрудничаем с организациями и юр лицами
+						</Title>
 					</div>
 
-					<ul className={cx("requirement__list")}>
-						{
-							items.length && items.map(item => (
-								createItem(item)
-							))
-						}
-					</ul>
-					<Title classNames={cx("requirement__subtitle")} levet='h3'>
-						сотрудничаем с организациями и юр лицами
-					</Title>
 				</div>
 
 

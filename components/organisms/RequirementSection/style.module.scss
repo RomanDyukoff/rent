@@ -1,6 +1,13 @@
 .requirement {
     padding: 40px 0;
     background-color: #f4f4f2;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__title {
         margin-bottom: 60px !important;
         text-align: center;
@@ -31,7 +38,7 @@
         }
     }
 
-    &__wrapper {
+    &__content {
         display: flex;
         justify-content: center;
         align-items: center;

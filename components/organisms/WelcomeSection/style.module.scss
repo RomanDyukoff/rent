@@ -1,14 +1,29 @@
 $media-sm: 768px;
 
 .welcome {
+    $text-light: #fff;
+    $line-heigth: 140%;
+    $font-weight-400: 400;
+    $font-family: "Forum", sans-serif;
+
     position: relative;
-    height: 600px;
+    height: auto;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 55vh;
+    }
 
     &__bg {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
+        bottom: 0;
+        width: 100vw;
         height: 100%;
         background-image: url("../../../public/arenda.jpg");
         background-size: cover;
@@ -21,57 +36,53 @@ $media-sm: 768px;
         display: none;
     }
 
-    &__content {
-        position: relative;
-        top: 220px;
-        left: 50%;
+    & .content {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 600px;
-        height: auto;
+        gap: 10px;
+        width: 80%;
         padding: 35px 40px;
-        transform: translate(-50%, 0);
-    }
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 16px;
+        filter: invert(1);
 
-    &__text {
-        margin: 0;
-        text-align: center;
-        font-family: "Forum", sans-serif;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 50px;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        color: #ffff;
+        &__title {
+            margin: 0;
+            text-align: center;
+            font-family: $font-family;
+            font-size: clamp(24px, 4.5vw, 40px);
+            font-style: normal;
+            font-weight: $font-weight-400;
+            line-height: $line-heigth;
+            color: $text-light;
+            letter-spacing: 3px;
+        }
+
+        &__text {
+            text-align: center;
+            font-family: $font-family;
+            font-size: clamp(18px, 4.5vw, 20px);
+            line-height: $line-heigth;
+            font-weight: $font-weight-400;
+            color: $text-light;
+        }
     }
 
     @media (max-width: $media-sm) {
-        height: 500px;
-
         &__contacts {
             display: flex;
         }
 
-        &__content {
-            top: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 500px;
+        & .content {
             padding: 30px;
-            background-color: transparent;
         }
     }
 
     @media (max-width: 576px) {
-        &__content {
-            width: 90%;
-            padding: 20px;
-        }
-
-        &__text {
-            font-size: 1.5rem;
+        & .content {
+            padding: 12px;
         }
     }
 }

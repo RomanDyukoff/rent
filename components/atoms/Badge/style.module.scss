@@ -8,7 +8,7 @@ $media-msm: 576px;
     padding: 1rem;
     color: #fff;
     & > p {
-        font-size: 2rem;
+        font-size: clamp(1.4rem, 4.5vw, 2rem);
     }
     &__contact {
         display: flex;
@@ -22,17 +22,12 @@ $media-msm: 576px;
 
         border-bottom: 2px solid rgba(240, 240, 240, 0.1);
 
-        & > div:first-child {
+        & > a {
             display: flex;
-            flex-direction: column;
-            gap: 3px;
-
-            & > a {
-                text-decoration: underline;
-            }
+            text-decoration: underline;
         }
 
-        & > div:last-child {
+        & > div {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -53,20 +48,14 @@ $media-msm: 576px;
     }
 
     @media (max-width: $media-msm) {
-        & > p {
-            font-size: 1.8rem;
-        }
-
         &__contact {
             gap: 20px;
         }
     }
-
-
 }
 
 @media (max-width: 899px) {
-    .badge{
+    .badge {
         display: flex;
     }
 }
