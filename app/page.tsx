@@ -5,12 +5,14 @@ import { RequirementSection } from "@/components/organisms/RequirementSection/Re
 import { WelcomeSection } from "@/components/organisms/WelcomeSection/WelcomeSection";
 
 export default function Home() {
+
     return (
         <>
             <WelcomeSection />
             <ContactsSection />
             <ParkSection />
             <Description />
+            <Description revers={true} />
             <RequirementSection />
         </>
     );

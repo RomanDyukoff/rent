@@ -5,6 +5,7 @@ import viber from '@/public/viber.svg'
 
 
 import styles from './style.module.scss'
+import Link from 'next/link';
 
 const cx = cnBind.bind(styles);
 
@@ -16,14 +17,14 @@ export const Badge = (): JSX.Element => {
 				Tелефон для связи
 			</p>
 			<div className={cx("badge__contact")}>
-				<a href="tel:+375298393593">+375298393593</a>
+				<Link href="tel:+375298393593">+375298393593</Link>
 				<div>
-					<a href="https://t.me/BogOko" target="_blank">
+					<Link href="https://t.me/Olesya_luk" target="_blank">
 						<Image src={telegram} alt='telegram' />
-					</a>
-					<a href="viber://add?+375298393593" target="_blank">
+					</Link>
+					<Link href='viber://chat?number=%2B375298393593' target='_blank'>
 						<Image src={viber} alt='viber' />
-					</a>
+					</Link>
 				</div>
 			</div>
 		</div>

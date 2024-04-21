@@ -6,12 +6,18 @@
     &__content {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         gap: 30px;
         width: 100%;
+
+        &.reverse {
+            flex-direction: row-reverse;
+        }
     }
 
     &__text {
         width: 50%;
+        text-align: justify;
         font-size: 1.5rem;
         line-height: 140%;
         font-weight: 300;
@@ -19,6 +25,27 @@
         & > span {
             font-weight: 500;
             text-transform: uppercase;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 50%;
+        padding-left: 1rem;
+        & > li {
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: flex-start;
+            padding: 10px;
+
+            & > span {
+                font-size: 1.5rem;
+                line-height: 140%;
+                font-weight: 300;
+            }
         }
     }
 
