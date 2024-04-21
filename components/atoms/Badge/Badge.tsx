@@ -1,7 +1,7 @@
 import cnBind from "classnames/bind";
 import Image from 'next/image';
-import telegram from '@/public/telegram.svg'
-import viber from '@/public/viber.svg'
+import telegram from '@/public/telegram_logo.svg'
+import viber from '@/public/viber_logo.svg'
 
 
 import styles from './style.module.scss'

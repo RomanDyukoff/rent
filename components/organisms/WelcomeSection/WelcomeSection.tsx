@@ -8,7 +8,7 @@ import { Title } from '@/components/atoms/Title/Title';
 const cx = cnBind.bind(styles);
 
 const data = {
-	title: 'АРЕНДА ГРУЗОВЫХ АВТО г.ВИТЕБСК категории "B"',
+	title: 'АРЕНДА ГРУЗОВЫХ АВТО г.ВИТЕБСК категория "B"',
 	text: 'Оставьте заявку на сайте мы перезвоними Вам в течении 30 минут'
 }
 
