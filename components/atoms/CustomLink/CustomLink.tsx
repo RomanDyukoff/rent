@@ -6,22 +6,18 @@ import Link from "next/link";
 
 interface CustomLinkType {
 	title: string;
+	href: string,
+	id: string
 }
-
-export const AddressContext = React.createContext({ href: '', id: '' })
 
 const cx = cnBind.bind(styles);
 
-export const CustomLink = ({ title }: CustomLinkType) => {
+export const CustomLink = ({ title, href, id }: CustomLinkType) => {
 	return (
-		<AddressContext.Consumer>
-			{({ href, id }) => (
-				<Link href={`/${href}/${id}`}
-					className={cx("btn", "btn-white", "btn-animate")}
-				>
-					{title}
-				</Link>
-			)}
-		</AddressContext.Consumer>
+		<Link href={`/${href}/${id}`}
+			className={cx("btn", "btn-white", "btn-animate")}
+		>
+			{title}
+		</Link>
 	)
 }

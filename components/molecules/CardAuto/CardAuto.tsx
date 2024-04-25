@@ -5,7 +5,7 @@ import styles from "./card-auto.module.scss";
 import Image from "next/image";
 import { Title } from "@/components/atoms/Title/Title";
 import { CardAutoType } from "@/const/interfaces";
-import { AddressContext, CustomLink } from '@/components/atoms/CustomLink/CustomLink';
+import { CustomLink } from '@/components/atoms/CustomLink/CustomLink';
 
 const cx = cnBind.bind(styles);
 
@@ -26,9 +26,7 @@ export const CardAuto = ({ name, img, money, year, weight, height, type, id }: C
                         <span className={cx("car__item")}>высота: <strong>{height}</strong></span>
                         <span className={cx("car__item")}>цена от: <strong>{money}</strong> руб/сутки</span>
                     </div>
-                    <AddressContext.Provider value={{ href: "car", id: id }}>
-                        <CustomLink title='подробнее' />
-                    </AddressContext.Provider>
+                    <CustomLink title='подробнее' href='car' id={id} />
                 </div>
             </div>
         </article>

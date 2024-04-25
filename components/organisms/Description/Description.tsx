@@ -4,8 +4,11 @@ import cnBind from "classnames/bind";
 import styles from "./description.module.scss";
 import { Container } from '@/components/atoms/Container/Container';
 import { Title } from '@/components/atoms/Title/Title';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import driver from '../../../public/assets/img/driver.jpg';
+import gaz from '@/public/assets/img/gaz3.jpg'
+import gaz2 from '@/public/assets/img/gaz4.jpg'
+
 
 
 const cx = cnBind.bind(styles);
@@ -13,10 +16,12 @@ const cx = cnBind.bind(styles);
 type RentType = {
 	title: string,
 	text: string[][],
+	image: StaticImageData,
 }
 type WhomType = {
 	title: string,
 	text: JSX.Element,
+	image: StaticImageData,
 }
 
 interface DescriptionDataType {
@@ -46,11 +51,13 @@ const descriptionData: DescriptionDataType = {
 			['Регулярное обслуживание.', 'Включает замену масла и воздушных фильтров.'],
 			['Чистый кузов.', 'Вы всегда получаете аккуратный и чистый автомобиль.'],
 			['Чистка салона.', 'Никакой пыли и грязи. Ухоженный салон без дефектов.'],
-		]
+		],
+		image: gaz,
 	},
 	whom: {
 		title: 'Для кого наши авто',
 		text: WhomText(),
+		image: gaz2,
 	}
 }
 
@@ -95,7 +102,7 @@ export const Description = ({ revers = false }: { revers?: boolean }): JSX.Eleme
 								</p>
 						}
 						<div className={cx('description__image')}>
-							<Image className={cx('description__image')} src={driver} alt='auto' />
+							<Image className={cx('description__image')} src={revers ? gaz2 : gaz} alt='auto' />
 						</div>
 					</article>
 				</div>

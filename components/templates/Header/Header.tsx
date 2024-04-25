@@ -13,7 +13,7 @@ import { useState, useEffect } from 'react';
 
 export const Header = (): JSX.Element => {
 	const { id } = useParams()
-	const [navLink, setNavLink] = useState<NavItemProps[]>([])
+	const [navLink, setNavLink] = useState<NavItemProps[]>([]);
 
 	useEffect(() => {
 		setNavLink(id ? itemsCar : items)

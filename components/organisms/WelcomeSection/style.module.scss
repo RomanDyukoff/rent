@@ -4,6 +4,8 @@ $media-sm: 768px;
     $text-light: #fff;
     $line-heigth: 140%;
     $font-weight-400: 400;
+    $font-weight-500: 500;
+    $font-weight-700: 700;
     $font-family: "Forum", sans-serif;
 
     position: relative;
@@ -12,10 +14,9 @@ $media-sm: 768px;
     &__wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         width: 100%;
-        height: 55vh;
+        height: 85vh;
     }
 
     &__bg {
@@ -30,40 +31,74 @@ $media-sm: 768px;
         background-position: center;
         filter: brightness(40%);
         z-index: -1;
+        background-attachment: fixed;
     }
 
-    &__contacts {
-        display: none;
+    &__contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 50px;
+        padding: 2rem 2.5rem;
+
+        font-size: 18px;
+        line-height: 22px;
+
+        border-bottom: 2px solid rgba(240, 240, 240, 0.1);
+
+        & > a {
+            display: inline-flex;
+            font-size: 2rem;
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        & > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+            & > a {
+                display: block;
+                width: 4rem;
+                height: 4rem;
+
+                & > img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
     }
 
     & .content {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        gap: 10px;
-        width: 80%;
-        padding: 35px 40px;
-        background-color: rgba(0, 0, 0, 0.5);
+        align-items: flex-start;
+        gap: 40px;
+        margin: auto 0;
         border-radius: 16px;
-        filter: invert(1);
 
         &__title {
             margin: 0;
-            text-align: center;
+            text-align: start;
             font-family: $font-family;
-            font-size: clamp(24px, 4.5vw, 40px);
+            font-size: 4rem;
             font-style: normal;
-            font-weight: $font-weight-400;
+            font-weight: $font-weight-700;
             line-height: $line-heigth;
             color: $text-light;
             letter-spacing: 3px;
         }
 
         &__text {
-            text-align: center;
+            text-align: start;
             font-family: $font-family;
-            font-size: clamp(18px, 4.5vw, 20px);
+            font-size: 3rem;
             line-height: $line-heigth;
             font-weight: $font-weight-400;
             color: $text-light;
@@ -71,18 +106,33 @@ $media-sm: 768px;
     }
 
     @media (max-width: $media-sm) {
-        &__contacts {
-            display: flex;
-        }
-
-        & .content {
-            padding: 30px;
+        &__contact {
+            & > a {
+                font-size: 1.5rem;
+            }
         }
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 480px) {
+        &__wrapper {
+            height: 60vh;
+        }
+
+        &__contact {
+            flex-direction: column;
+            padding: 2rem 0;
+        }
+
         & .content {
             padding: 12px;
+
+            &__title {
+                font-size: 3rem;
+            }
+
+            &__text {
+                font-size: 1.8rem;
+            }
         }
     }
 }

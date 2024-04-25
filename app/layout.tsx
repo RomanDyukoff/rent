@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import { Header } from '@/components/templates/Header/Header'
 import { Footer } from '@/components/templates/Footer/Footer'
 
 import './globals.scss'
 
-const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({ weight: ['400', '500', '700'], subsets: ['cyrillic'], style: 'normal' });
 
 export const metadata: Metadata = {
   title: 'Аренда автомобиля в витебске',
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <Header />
 
         <main>{children}</main>
