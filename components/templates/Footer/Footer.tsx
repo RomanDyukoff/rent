@@ -10,7 +10,7 @@ import logo from "@/public/logo.svg";
 import { Logo } from "@/components/atoms/Logo/Logo";
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { NavItemProps } from '@/components/atoms/NavItem/NavItem';
+import { NavItemProps } from '@/components/atoms/NavItem/NavItem.type';
 
 const cx = cnBind.bind(styles);
 export const Footer = () => {
@@ -38,7 +38,7 @@ export const Footer = () => {
                             УНП 391818928
                         </span>
                     </div>
-                   
+
                 </div>
                 <div className={cx("panel")}>
                     <div className={cx("nav")}>

@@ -1,16 +1,8 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import cnBind from "classnames/bind";
 import styles from './style.module.scss'
+import { ListDescriptionType } from './rentalConditions.type';
 
-export interface ItemDescriptionType {
-	img: StaticImageData;
-	text: string;
-}
-
-export interface ListDescriptionType {
-	items: ItemDescriptionType[]
-	classNames?: string;
-}
 
 const cx = cnBind.bind(styles);
 
@@ -20,15 +12,15 @@ export const RentalСonditionsList = ({ items, classNames }: ListDescriptionType
 			{
 				items.length && items.map((item, i) => (
 					<li key={i} className={cx("rental-conditions__item")}>
-						<div className={cx("rental-conditions__image")}>
+						<figure className={cx("rental-conditions__image")}>
 							<Image src={item.img} alt='picture' />
-						</div>
-						<span className={cx("rental-conditions__text")}>
-							{item.text}
-						</span>
+							<span className={cx("rental-conditions__text")}>
+								{item.text}
+							</span>
+						</figure>
 					</li>
 				))
 			}
-		</ul>
+		</ul >
 	)
 }

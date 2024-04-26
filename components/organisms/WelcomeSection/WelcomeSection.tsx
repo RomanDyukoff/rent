@@ -6,16 +6,12 @@ import { Title } from '@/components/atoms/Title/Title';
 import Link from 'next/dist/client/link';
 import telegram from '@/public/telegram_logo.svg'
 import viber from '@/public/viber_logo.svg'
+import { welcomeData } from '@/const/welcomeData';
 
 
 const cx = cnBind.bind(styles);
 
-const data = {
-	title: 'АРЕНДА ГРУЗОВЫХ АВТО',
-	text: 'Оставьте заявку и мы перезвоним Вам в течении 30 минут'
-}
-
-const { title, text } = data;
+const { title, text, phone } = welcomeData;
 
 export const WelcomeSection = (): JSX.Element => {
 	return (
@@ -24,7 +20,7 @@ export const WelcomeSection = (): JSX.Element => {
 			<Container>
 				<div className={cx('welcome__wrapper')}>
 					<div className={cx("welcome__contact")}>
-						<Link href="tel:+375298393593">+375298393593</Link>
+						<Link href={`tel:${phone}`}>{phone}</Link>
 						<div>
 							<Link href="https://t.me/Olesya_luk" target="_blank">
 								<Image src={telegram} alt='telegram' />
@@ -49,6 +45,6 @@ export const WelcomeSection = (): JSX.Element => {
 					</article>
 				</div>
 			</Container>
-		</section>
+		</section >
 	);
 };

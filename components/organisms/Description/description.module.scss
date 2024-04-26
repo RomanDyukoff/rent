@@ -1,6 +1,6 @@
 .description {
     &__wrapper {
-        padding: 60px 0;
+        padding: 24px 0;
     }
 
     &__content {
@@ -52,7 +52,7 @@
     &__image {
         width: 50%;
         height: auto;
-        border-radius: 16px;
+        border-radius: 1rem;
         overflow: hidden;
         & > img {
             width: 100%;

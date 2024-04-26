@@ -3,12 +3,9 @@ import React from 'react';
 import styles from './style.module.scss'
 import cnBind from "classnames/bind";
 import Link from "next/link";
+import { CustomLinkType } from './CustomLink.type';
 
-interface CustomLinkType {
-	title: string;
-	href: string,
-	id: string
-}
+
 
 const cx = cnBind.bind(styles);
 

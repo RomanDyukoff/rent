@@ -1,10 +1,8 @@
 import cnBind from "classnames/bind";
 import styles from './style.module.scss';
+import { NavItemProps } from './NavItem.type';
 
-export interface NavItemProps {
-	href: string;
-	label: string;
-}
+
 
 const cx = cnBind.bind(styles);
 

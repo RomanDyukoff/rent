@@ -2,14 +2,11 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import cnBind from "classnames/bind";
-
-import type { NavItemProps } from '../../atoms/NavItem/NavItem';
 import { NavList } from '../../atoms/NavList/NavList';
-
 import styles from './style.module.scss';
-
 import Image from 'next/image';
 import phone from '@/public/phone.svg'
+import { NavItemProps } from '@/components/atoms/NavItem/NavItem.type';
 
 interface NavigationProps {
 	classNames?: string;

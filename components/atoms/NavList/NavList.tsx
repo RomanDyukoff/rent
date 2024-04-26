@@ -1,10 +1,8 @@
 import React, { forwardRef } from 'react';
-import { NavItemProps, NavItem } from '../NavItem/NavItem';
+import { NavItem } from '../NavItem/NavItem';
+import { NavListProps } from './NavList.type';
 
-interface NavListProps {
-	classNames?: string;
-	navItems: NavItemProps[];
-}
+
 
 export const NavList =
 	forwardRef<HTMLUListElement, NavListProps>

@@ -5,11 +5,10 @@ import { Logo } from '@/components/atoms/Logo/Logo';
 import { Navigation } from '@/components/molecules/Navigation/Navigation';
 import styles from './style.module.scss';
 import { items, itemsCar } from "@/const/links";
-
 import logo from "@/public/logo.svg"
 import { useParams } from 'next/navigation';
-import { NavItemProps } from '@/components/atoms/NavItem/NavItem';
 import { useState, useEffect } from 'react';
+import { NavItemProps } from '@/components/atoms/NavItem/NavItem.type';
 
 export const Header = (): JSX.Element => {
 	const { id } = useParams()
