@@ -14,7 +14,7 @@ $media-sm: 768px;
     &__wrapper {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
         height: auto;
         padding: 0 0 48px 0;
@@ -32,7 +32,6 @@ $media-sm: 768px;
         background-position: center;
         filter: brightness(40%);
         z-index: -1;
-        // background-attachment: fixed;
     }
 
     &__contact {
@@ -79,14 +78,14 @@ $media-sm: 768px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         gap: 40px;
         margin: auto 0;
         border-radius: 1rem;
 
         &__title {
+            text-align: center;
             margin: 0;
-            text-align: start;
             font-family: $font-family;
             font-size: 4rem;
             font-style: normal;
@@ -97,7 +96,7 @@ $media-sm: 768px;
         }
 
         &__text {
-            text-align: start;
+            text-align: center;
             font-family: $font-family;
             font-size: 3rem;
             line-height: $line-heigth;
