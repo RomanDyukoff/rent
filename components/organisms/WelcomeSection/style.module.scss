@@ -32,7 +32,7 @@ $media-sm: 768px;
         background-position: center;
         filter: brightness(40%);
         z-index: -1;
-        background-attachment: fixed;
+        // background-attachment: fixed;
     }
 
     &__contact {
