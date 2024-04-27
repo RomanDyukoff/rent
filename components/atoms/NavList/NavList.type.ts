@@ -1,4 +1,4 @@
-import { NavItemProps } from "../NavItem/NavItem.type";
+import type { NavItemProps } from "../NavItem/NavItem.type";
 
 export interface NavListProps {
     classNames?: string;

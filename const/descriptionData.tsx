@@ -1,6 +1,7 @@
-import { DescriptionDataType } from '@/components/organisms/Description/Description.type';
-import gaz from '@/public/assets/img/gaz3.jpg'
-import gaz2 from '@/public/assets/img/gaz4.jpg'
+import type { DescriptionDataType } from "@/components/organisms/Description/Description.type";
+import gaz from "@/public/assets/img/gaz3.jpg";
+import gaz2 from "@/public/assets/img/gaz4.jpg";
+
 export const WhomText = (): JSX.Element => (
     <>
         Для тех кто выбирает доступный, удобный и надёжный автомобиль для выполнения перевозки мебели, строительных

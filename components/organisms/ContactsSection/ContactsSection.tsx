@@ -1,9 +1,13 @@
 "use client";
-import { Title } from "@/components/atoms/Title/Title";
-import { Container } from "../../atoms/Container/Container";
-import styles from "./contacts.module.scss";
+
 import cnBind from "classnames/bind";
+
+import { Title } from "@/components/atoms/Title/Title";
 import { Form } from "@/components/molecules/Form/Form";
+
+import { Container } from "../../atoms/Container/Container";
+
+import styles from "./contacts.module.scss";
 
 const cx = cnBind.bind(styles);
 
@@ -33,4 +37,3 @@ export const ContactsSection = (): JSX.Element => {
         </section>
     );
 };
-

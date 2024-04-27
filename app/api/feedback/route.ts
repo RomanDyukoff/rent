@@ -1,14 +1,16 @@
-"use server"
+"use server";
+
+import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import { NextRequest, NextResponse } from "next/server";
-import Mail from "nodemailer/lib/mailer";
+import type Mail from "nodemailer/lib/mailer";
 
 export async function POST(req: NextRequest) {
-
-    const phone = await req.json();
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const phone: string = await req.json();
 
     const transporter = nodemailer.createTransport({
-        service: 'yandex',
+        service: "yandex",
         port: 465,
         host: "smtp.yandex.ru",
         auth: {
@@ -21,13 +23,13 @@ export async function POST(req: NextRequest) {
         from: "arendaavtovtb@yandex.by",
         to: "arendaavtovtb@yandex.by",
         subject: `Message from ${phone}`,
-        text:  `${phone}`,
+        text: `${phone}`,
     };
     const sendMailPromise = () =>
         new Promise<string>((resolve, reject) => {
-            transporter.sendMail(mailOptions, function (err) {
+            transporter.sendMail(mailOptions, function(err) {
                 if (!err) {
-                    resolve('Email sent');
+                    resolve("Email sent");
                 } else {
                     reject(err.message);
                 }
@@ -36,7 +38,8 @@ export async function POST(req: NextRequest) {
 
     try {
         await sendMailPromise();
-        return NextResponse.json({ message: 'Email sent' });
+
+        return NextResponse.json({ message: "Email sent" });
     } catch (err) {
         return NextResponse.json({ error: err }, { status: 500 });
     }

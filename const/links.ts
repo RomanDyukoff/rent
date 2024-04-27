@@ -1,4 +1,4 @@
-import { NavItemProps } from "@/components/atoms/NavItem/NavItem.type";
+import type { NavItemProps } from "@/components/atoms/NavItem/NavItem.type";
 
 export const items: NavItemProps[] = [
     { href: "#contacts", label: "Контакты" },

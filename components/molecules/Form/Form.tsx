@@ -1,4 +1,5 @@
-'use client'
+"use client";
+
 import { useState } from "react";
 import cnBind from "classnames/bind";
 
@@ -11,11 +12,7 @@ const cx = cnBind.bind(styles);
 
 type FormInputType = "phone" | "name";
 
-export const Form = ({
-    classNames
-}: {
-    classNames?: string;
-}) => {
+export const Form = ({ classNames }: { classNames?: string }) => {
     const [form, setForm] = useState<{ [key in FormInputType]: string }>({ name: "", phone: "+375" });
 
     const formatter = (val: string, type: FormInputType) => {
@@ -33,7 +30,6 @@ export const Form = ({
         return newVal;
     };
 
-
     const handleSubmit = async () => {
         await fetch("api/feedback/", {
             method: "post",
@@ -42,7 +38,7 @@ export const Form = ({
             },
             body: JSON.stringify(form.phone),
         }).then((res) => res.ok);
-        setForm({name:"", phone:"+375"})
+        setForm({ name: "", phone: "+375" });
     };
 
     const handleChange = (val: string, type: FormInputType) => {
@@ -74,10 +70,7 @@ export const Form = ({
                     maxLength={13}
                 />
             </div>
-            <Button
-                classNames={cx("form__button", "btn", "btn-white", "btn-animate")}
-                handleAction={handleSubmit}
-            >
+            <Button classNames={cx("form__button", "btn", "btn-white", "btn-animate")} handleAction={handleSubmit}>
                 Отправить
             </Button>
         </div>
