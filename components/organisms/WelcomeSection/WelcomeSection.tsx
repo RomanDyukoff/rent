@@ -7,10 +7,8 @@ import Link from 'next/dist/client/link';
 import telegram from '@/public/telegram_logo.svg'
 import viber from '@/public/viber_logo.svg'
 import { welcomeData } from '@/const/welcomeData';
-import arenda from '@/public/arenda.webp'
-import arendaMob from '@/public/arenda-mob.webp'
-import arendaMd from '@/public/arenda-md.webp'
-import arendaMd2 from '@/public/arenda-md2.webp'
+import arenda from '@/public/arenda.jpg'
+
 
 
 const cx = cnBind.bind(styles);
@@ -20,12 +18,9 @@ const { title, text, phone } = welcomeData;
 export const WelcomeSection = (): JSX.Element => {
 	return (
 		<section className={cx("welcome")} id="welcome">
-			<picture className={cx("welcome__bg")}>
-				<source srcSet={arendaMob.src} media="(max-width: 580px)" />
-				<source srcSet={arendaMd2.src} media="(max-width: 660px)" />
-				<source srcSet={arendaMd.src} media="(max-width: 990px)" />
+			<div className={cx("welcome__bg")}>
 				<Image src={arenda} alt='cover' />
-			</picture>
+			</div>
 			<Container>
 				<div className={cx('welcome__wrapper')}>
 					<div className={cx("welcome__contact")}>

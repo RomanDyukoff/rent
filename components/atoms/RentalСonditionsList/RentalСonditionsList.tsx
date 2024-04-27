@@ -12,12 +12,12 @@ export const RentalСonditionsList = ({ items, classNames }: ListDescriptionType
 			{
 				items.length && items.map((item, i) => (
 					<li key={i} className={cx("rental-conditions__item")}>
-						<figure className={cx("rental-conditions__image")}>
+						<div className={cx("rental-conditions__image")}>
 							<Image src={item.img} alt='picture' />
 							<span className={cx("rental-conditions__text")}>
 								{item.text}
 							</span>
-						</figure>
+						</div>
 					</li>
 				))
 			}
