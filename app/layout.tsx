@@ -9,7 +9,7 @@ const montserrat = Montserrat({ weight: ['400', '500', '700'], subsets: ['cyrill
 
 export const metadata: Metadata = {
   title: 'Аренда автомобиля в витебске',
-  description: 'Аренда грузового автомобиля в витебске',
+  description: 'Аренда грузового автомобиля категории "B" в Витебске. У нас доступные цены и простые условия аренды. Для бронирования звоните по телефону: +375298393593',
 }
 
 export default function RootLayout({
